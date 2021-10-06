@@ -24,6 +24,7 @@ Initially, we aim to train our model to extract features which would recognize h
 
 ## [QuadChart](./docs/QuadChart_Human_Detector_and_Tracker.pdf)
 
+## [Proposal Report](./docs/Human_Detector_And_Tracker_Proposal.pdf)
 
 ## Deliverables
 - Project: Human(s) obstacle detector and tracker - Output in robot reference frame.
