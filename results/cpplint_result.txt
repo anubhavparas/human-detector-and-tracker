@@ -1,0 +1,5 @@
+Done processing ./app/main.cpp
+Done processing ./include/detector.hpp
+Done processing ./src/detector.cpp
+Done processing ./test/main.cpp
+Done processing ./test/test_detector.cpp
