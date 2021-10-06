@@ -45,6 +45,21 @@ The following are the proposed designs for the human detector and tracker:
 
 Activity flow diagrams can be found [here](./docs/images/).
 
+## Deveopment process
+Agile Development Process will be used in the development process with Test-Driven Development.
+
+## Tools and Technologies used
+- Ubuntu 18.04(LTS)
+- C++ 14+
+- CMake
+- OpenCV
+- Travis CI
+- Coveralls
+
+## Dependencies
+- OpenCV
+- Eigen
+- Boost
 
 ## Standard install via command-line
 ```
