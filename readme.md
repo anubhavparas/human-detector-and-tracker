@@ -9,7 +9,7 @@ Module to detect and track humans and return their coordinate position.
 
 Authors: 
 - [Anubhav Paras](https://github.com/anubhavparas) (Navigator)
-- [Sakshi Kakde](https://github.com/sakshikakde) (Driver)
+- [Sakshi Kakde](https://github.com/sakshikakde) (Heavy Driver)
 - [Siddharth Telang](https://github.com/siddharthtelang) (Design Keeper)
 
 ## Overview
