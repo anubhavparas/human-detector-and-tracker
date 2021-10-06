@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.2.1)
-project (pid-controller-software)
+project (human-detector-and-tracker)
+find_package(OpenCV REQUIRED)
 
 # Add project cmake modules to path.
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
