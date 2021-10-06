@@ -1,4 +1,7 @@
-# Acme Robotics PID Controller
+# Human Detector and Tracker
+
+Module to detect and track humans and return their coordinate position.
+
 [![Build Status](https://app.travis-ci.com/anubhavparas/human-detector-and-tracker.svg?branch=main)](https://app.travis-ci.com/anubhavparas/human-detector-and-tracker)
 [![Coverage Status](https://coveralls.io/repos/github/anubhavparas/human-detector-and-tracker/badge.png?branch=main)](https://coveralls.io/github/anubhavparas/human-detector-and-tracker?branch=main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
