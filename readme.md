@@ -22,6 +22,8 @@ Acme robotics would be launching their robotics based product next year and a hu
 
 Initially, we aim to train our model to extract features which would recognize humans in any given data set. We plan to use the INRIA Person Dataset to train our model. Given the data, a HoG would be generated. Next, these HOG vectors or features will be used to train a SVM classifier to detect the location of a human in any image. An error function will calculate the error made in classification which would be then fed to the classifier as a feedback to improve the accuracy. After the training is completed, the classifier would be able to detect the human position and draw a bounding box around it in real time feed from Monocular camera. In addition to this, the output of the classifier would be given to a tracking system to keep track of human(s) in real-time. Moreover, the tracked output will also be converted from image and camera frame to robot’s frame for further processing.
 
+## [QuadChart](./docs/QuadChart_Human_Detector_and_Tracker.pdf)
+
 
 ## Deliverables
 - Project: Human(s) obstacle detector and tracker - Output in robot reference frame.
