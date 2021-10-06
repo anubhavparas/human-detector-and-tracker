@@ -24,15 +24,15 @@ Initially, we aim to train our model to extract features which would recognize h
 
 
 ## Deliverables
-- Project: Human(s) obstacle detector and tracker - Output in robot reference frame
-- Overview of proposed work including timeline, risks, and mitigations
-- UML diagrams
-- Github repository with README
-- Travis code coverage setup with Coveralls
-- Developer-level documentation
+- Project: Human(s) obstacle detector and tracker - Output in robot reference frame.
+- Overview of proposed work including timeline, risks, and mitigations.
+- UML diagrams.
+- Github repository with [README](./readme.md)
+- Travis code coverage setup with Coveralls.
+- Developer-level documentation.
 
 ## Potential Risks and Mitigation
-- HoG is not scale invariant
+- HoG is not scale invariant.
 - Missed detections: It may happen that the model sometimes misses the detection of human presence. In such a case, deploying more than one and different models can be more useful.
 - False and duplicate detection: Can be reduced by training the model such that the parameters are well tuned and the loss on validation data set is minimum.
 - Unreliable detection boundary: Can be made accurate by selecting an optimum classifier, like the Bayes classifier.
