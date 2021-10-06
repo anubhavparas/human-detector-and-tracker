@@ -35,12 +35,12 @@ Initially, we aim to train our model to extract features which would recognize h
 - Unreliable detection boundary: Can be made accurate by selecting an optimum classifier, like the Bayes classifier.
 - Flickers in detection: Filter can be deployed for a better estimate.
 
+## Design
 The following are the proposed designs for the human detector and tracker: 
 
-TO BE ADDED.....!
+![alt text](./docs/images/HumanDetectorTracker_ClassDiagram.png?raw=true "PID Controller")
 
-Flow diagrams can be found [here](./docs/images/).
-
+Activity flow diagrams can be found [here](./docs/images/).
 
 
 ## Standard install via command-line
