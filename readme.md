@@ -20,7 +20,7 @@ Numerous human object detectors have been developed till date which work very sm
 
 Acme robotics would be launching their robotics based product next year and a human detection and tracking system is the heart of that product. They have given us the complete ownership of designing and developing this detector and tracker. For this application, we aim to use Histogram of Features(HoG) with a Support Vector Machine(SVM) classifier.
 
-Initially, we aim to train our model to extract features which would recognize humans in any given data set. We plan to use the INRIA Person Dataset to train our model. Given the data, a HoG would be generated. Next, these HOG vectors or features will be used to train a SVM classifier to detect the location of a human in any image. An error function will calculate the error made in classification which would be then fed to the classifier as a feedback to improve the accuracy. After the training is completed, the classifier would be able to detect the human position and draw a bounding box around it in real time. In addition to this, the output of the classifier would be given to a tracking system to keep track of human(s) in real-time. Moreover, the tracked output will also be converted from image and camera frame to robot’s frame for further processing.
+Initially, we aim to train our model to extract features which would recognize humans in any given data set. We plan to use the INRIA Person Dataset to train our model. Given the data, a HoG would be generated. Next, these HOG vectors or features will be used to train a SVM classifier to detect the location of a human in any image. An error function will calculate the error made in classification which would be then fed to the classifier as a feedback to improve the accuracy. After the training is completed, the classifier would be able to detect the human position and draw a bounding box around it in real time feed from Monocular camera. In addition to this, the output of the classifier would be given to a tracking system to keep track of human(s) in real-time. Moreover, the tracked output will also be converted from image and camera frame to robot’s frame for further processing.
 
 
 ## Deliverables
@@ -57,9 +57,11 @@ Agile Development Process will be used in the development process with Test-Driv
 - Coveralls
 
 ## Dependencies
-- OpenCV
-- Eigen
-- Boost
+- OpenCV 4.5.0 (covered under the open-source Apache 2 License)
+- Eigen 3.4.0
+- Boost 1.65
+- GMock
+- GTest
 
 ## Standard install via command-line
 ```
