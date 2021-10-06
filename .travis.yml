@@ -23,7 +23,8 @@ matrix:
 before_install:
   - pip install --user cpp-coveralls
 install:
-  - sudo apt-get install -y -qq lcov
+  - sudo chmod +x install_dependencies.sh
+  - ./install_dependencies.sh
 script:
   - export CXX=$COMPILER;
   - mkdir build
@@ -34,7 +35,7 @@ script:
   - test/cpp-test
 
 after_success:
-  - coveralls --root .. -E ".*external.*" -E ".*CMakeFiles.*" -E ".*test/.*.cpp.*" -E ".*app/main.cpp"
+  - coveralls --root .. -E ".*external.*" -E ".*CMakeFiles.*" -E ".*test/.*.cpp.*" -E ".*app/main.cpp" -E ".*opencv*" 
 
 notifications:
   email: false
