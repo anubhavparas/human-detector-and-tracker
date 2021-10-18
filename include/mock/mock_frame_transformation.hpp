@@ -1,7 +1,7 @@
 /** Copyright 2021 Sakshi Kakde, Siddharth Telang, Anubhav Paras */
 
-#ifndef INCLUDE_FRAMETRANSFORMATION_HPP_
-#define INCLUDE_FRAMETRANSFORMATION_HPP_
+#ifndef INCLUDE_MOCK_MOCK_FRAME_TRANSFORMATION_HPP_
+#define INCLUDE_MOCK_MOCK_FRAME_TRANSFORMATION_HPP_
 
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
@@ -14,4 +14,4 @@ class MockFrameTR : public FrameTransformation{
   MOCK_METHOD1(getRobotFrame, Coord3D(Coord2D));
 };
 
-#endif  // INCLUDE_FRAMETRANSFORMATION_HPP_
+#endif  // INCLUDE_MOCK_MOCK_FRAME_TRANSFORMATION_HPP_

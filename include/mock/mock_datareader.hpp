@@ -1,7 +1,7 @@
 /** Copyright 2021 Sakshi Kakde, Siddharth Telang, Anubhav Paras */
 
-#ifndef INCLUDE_MOCK_DATAREADER_HPP_
-#define INCLUDE_MOCK_DATAREADER_HPP_
+#ifndef INCLUDE_MOCK_MOCK_DATAREADER_HPP_
+#define INCLUDE_MOCK_MOCK_DATAREADER_HPP_
 
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
@@ -15,4 +15,4 @@ class MockDataReader : public DataReader<cv::Mat> {
   MOCK_METHOD1(readData, cv::Mat(std::string));
 };
 
-#endif  // INCLUDE_MOCK_DATAREADER_HPP_
+#endif  // INCLUDE_MOCK_MOCK_DATAREADER_HPP_
