@@ -93,6 +93,19 @@ Agile Development Process will be used in the development process with Test-Driv
 - GMock BSD 3-Clause "New" or "Revised" License
 - GTest BSD 3-Clause "New" or "Revised" License
 
+## Dataset
+
+We are using the INRIA dataset.
+
+Instructions to fetch the dataset:
+- Run
+```
+wget ftp://ftp.inrialpes.fr/pub/lear/douze/data/INRIAPerson.tar
+```
+- Extract the images from the dataset into a [testdata](./data/testdata) folder of the repository.
+
+
+
 ## Standard install via command-line
 
 ### Install Dependencies
