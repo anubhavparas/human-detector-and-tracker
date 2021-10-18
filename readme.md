@@ -8,8 +8,8 @@ Module to detect and track humans and return their coordinate position.
 ---
 
 Authors: 
-- [Anubhav Paras](https://github.com/anubhavparas) (Navigator)
-- [Sakshi Kakde](https://github.com/sakshikakde) (Driver)
+- [Anubhav Paras](https://github.com/anubhavparas) (Driver)
+- [Sakshi Kakde](https://github.com/sakshikakde) (Navigator)
 - [Siddharth Telang](https://github.com/siddharthtelang) (Design Keeper)
 
 ## Overview
@@ -49,7 +49,7 @@ The following are the proposed designs for the human detector and tracker:
 
 Activity flow diagrams can be found [here](./docs/images/).
 
-## Deveopment process
+## Development process
 Agile Development Process will be used in the development process with Test-Driven Development.
 
 ## [Product Backlog](https://docs.google.com/spreadsheets/d/1DSndkYyvKeA0DBJtzWZuSUIHXLhYmBShil_r_3koDa0/edit#gid=0)
@@ -62,12 +62,12 @@ Agile Development Process will be used in the development process with Test-Driv
 - Travis CI
 - Coveralls
 
-## Dependencies
+## Dependencies with licenses
 - OpenCV 4.5.0 (covered under the open-source Apache 2 License)
-- Eigen 3.4.0
-- Boost 1.65
-- GMock
-- GTest
+- Eigen 3.4 the Mozilla Public License 2.0
+- Boost 1.65 Boost software license
+- GMock BSD 3-Clause "New" or "Revised" License
+- GTest BSD 3-Clause "New" or "Revised" License
 
 ## Standard install via command-line
 ```
