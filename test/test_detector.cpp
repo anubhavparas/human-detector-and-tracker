@@ -49,6 +49,8 @@ TEST(detector_test, test_detect) {
     // cv::destroyAllWindows();
     delete detector;
     detector = nullptr;
+    ::testing::Mock::VerifyAndClearExpectations(mockModel.get());
+    ::testing::Mock::VerifyAndClearExpectations(mockFrameTR.get());
 }
 
 
@@ -78,4 +80,6 @@ TEST(detector_test, test_detect_no_boundingbox) {
 
     delete detector;
     detector = nullptr;
+    ::testing::Mock::VerifyAndClearExpectations(mockModel.get());
+    ::testing::Mock::VerifyAndClearExpectations(mockFrameTR.get());
 }
