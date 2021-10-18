@@ -42,7 +42,7 @@ class Driver {
    * 
    * @param data_path 
    */
-  void executeDetectionPipeLine(std::string data_path);
+  bool executeDetectionPipeLine(std::string data_path);
 
  private:
   DataReader<cv::Mat>* dataReader;
