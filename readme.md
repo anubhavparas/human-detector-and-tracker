@@ -45,7 +45,7 @@ Initially, we aim to train our model to extract features which would recognize h
 ## Design
 The following are the proposed designs for the human detector and tracker: 
 
-![alt text](./UML/initial/HumanDetectorTracker_ClassDiagram.png?raw=true "PID Controller")
+![alt text](./UML/initial/HumanDetectorTracker_ClassDiagram.png?raw=true "Human Detecttor Class Diagram")
 
 Activity flow diagrams can be found [here](./UML/initial/).
 
