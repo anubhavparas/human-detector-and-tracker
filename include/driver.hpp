@@ -3,12 +3,12 @@
 #ifndef INCLUDE_DRIVER_HPP_
 #define INCLUDE_DRIVER_HPP_
 
+#include <memory>
+#include <string>
 #include <datareader.hpp>
 #include <detector.hpp>
-#include <memory>
 #include <model.hpp>
 #include <preprocessor.hpp>
-#include <string>
 #include <types.hpp>
 
 /**
@@ -42,7 +42,7 @@ class Driver {
    * 
    * @param data_path 
    */
-  void executeDetectionPipeLine(std::string data_path);
+  bool executeDetectionPipeLine(std::string data_path);
 
  private:
   DataReader<cv::Mat>* dataReader;

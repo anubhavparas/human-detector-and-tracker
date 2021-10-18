@@ -71,7 +71,7 @@ void HD::displayOutput(const cv::Mat &image,
   }
 
   cv::imshow("Detected Humans", image);
-  cv::waitKey(100);
+  cv::waitKey(600);
 }
 
 std::vector<Coord3D> HD::detect(const cv::Mat &inputData) {

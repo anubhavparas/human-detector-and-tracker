@@ -5,7 +5,6 @@
 
 #include <memory>
 #include <string>
-#include <optional>
 #include <opencv2/opencv.hpp>
 #include <types.hpp>
 

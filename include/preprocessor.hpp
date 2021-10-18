@@ -31,8 +31,8 @@ class PreProcessor {
    * @param output 
    * @param size 
    */
-  virtual void resize(const cv::Mat& input,
-                      const cv::Mat& output, cv::Size size);
+  virtual void resize(cv::InputArray input,
+                      cv::OutputArray output, cv::Size size);
 };
 
 #endif  // INCLUDE_PREPROCESSOR_HPP_

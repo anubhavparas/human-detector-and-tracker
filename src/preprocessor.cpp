@@ -6,7 +6,9 @@ PreProcessor::PreProcessor() {}
 
 PreProcessor::~PreProcessor() {}
 
-void PreProcessor::resize(const cv::Mat& input,
-                            const cv::Mat& output, cv::Size size) {
-    cv::resize(input, output, size);
+void PreProcessor::resize(cv::InputArray input,
+                          cv::OutputArray output, cv::Size size) {
+    if (size != cv::Size()) {
+        cv::resize(input, output, size);
+    }
 }

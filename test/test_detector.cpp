@@ -16,7 +16,7 @@ TEST(detector_test, test_detect) {
     MockModel mockModel;
     MockFrameTR mockFrameTR;
 
-    std::string test_path = "../docs/images/FudanPed00028.png";
+    std::string test_path = "../data/testdata/FudanPed00028.png";
     cv::Mat image = cv::imread(test_path);
 
     // ARRANGE
@@ -55,7 +55,7 @@ TEST(detector_test, test_detect_no_boundingbox) {
     MockModel mockModel;
     MockFrameTR mockFrameTR;
 
-    std::string test_path = "../docs/images/horse.png";
+    std::string test_path = "../data/testdata/horse.png";
     cv::Mat image = cv::imread(test_path);
 
     // ARRANGE

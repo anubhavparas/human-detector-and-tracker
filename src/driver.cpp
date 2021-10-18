@@ -30,7 +30,7 @@ Driver::~Driver() {
     }
 }
 
-void Driver::executeDetectionPipeLine(std::string data_path) {
+bool Driver::executeDetectionPipeLine(std::string data_path) {
     std::vector<cv::String> filePaths;
     cv::glob(data_path, filePaths);
 
@@ -55,4 +55,5 @@ void Driver::executeDetectionPipeLine(std::string data_path) {
                       << std::endl;
         }
     }
+    return true;
 }
