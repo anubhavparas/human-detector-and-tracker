@@ -33,12 +33,14 @@ class HumanDetector : public Detector {
   HumanDetector();
 
   /**
-   * @brief Construct a new Human Detector object based on some model
+   * @brief Construct a new Human Detector object
    * 
-   * @param model model to be used be the detector to predict
+   * @param model model used to predict and fetch the bounding boxes
+   * @param robotFrame frame transformation to get the coordinates in
+   * robot frame
    */
-  HumanDetector(Model<DetectionOutput, Image>* model,
-                  FrameTransformation* robotFrame);
+  HumanDetector(std::unique_ptr<Model<DetectionOutput, Image>> model,
+                  std::unique_ptr<FrameTransformation> robotFrame);
 
   /**
    * @brief Destroy the Human Detector object
@@ -58,12 +60,10 @@ class HumanDetector : public Detector {
 
  private:
   // model to find the humans
-  Model<DetectionOutput, Image>* model;
-  // std::unique_ptr<Model<DetectionOutput, Image>> model;
+  std::unique_ptr<Model<DetectionOutput, Image>> model;
 
   // to get the coordinates in robot frame
-  FrameTransformation* robotFrame;
-  // std::unique_ptr<FrameTransformation> robotFrame;
+  std::unique_ptr<FrameTransformation> robotFrame;
 
   /**
    * @brief Get the list of centroid coordinates of the detected humans in an image

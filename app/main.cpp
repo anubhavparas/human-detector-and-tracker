@@ -16,13 +16,19 @@ int main() {
   std::cout << "Welcome to Human Detector and Tracker."
             << std::endl;
 
-  DataReader<cv::Mat>* dataReader = new ImageReader();
-  PreProcessor* preProcessor = new PreProcessor();
-  Model<DetectionOutput, Image>* svmModel = new SVMHumanClassifier();
-  FrameTransformation* robotFrame = new FrameTransformation();
+  std::unique_ptr<DataReader<cv::Mat>> dataReader(new ImageReader());
+  std::unique_ptr<PreProcessor> preProcessor(new PreProcessor());
+  std::unique_ptr<Model<DetectionOutput, Image>> svmModel(
+                                            new SVMHumanClassifier());
+  std::unique_ptr<FrameTransformation> robotFrame(new FrameTransformation());
 
-  Detector* humanDetector = new HumanDetector(svmModel, robotFrame);
-  Driver* detectionDriver = new Driver(dataReader, preProcessor, humanDetector);
+
+  std::unique_ptr<Detector> humanDetector(new HumanDetector(std::move(svmModel),
+                                              std::move(robotFrame)));
+
+  Driver* detectionDriver = new Driver(std::move(dataReader),
+                                       std::move(preProcessor),
+                                       std::move(humanDetector));
 
   std::string test_dir = "../data/testdata";
   detectionDriver->executeDetectionPipeLine(test_dir);
