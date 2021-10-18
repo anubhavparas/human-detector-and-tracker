@@ -1,0 +1,1 @@
+[include/driver.hpp:18]: (style) class 'Driver' does not have a copy constructor which is recommended since the class contains a pointer to allocated memory.

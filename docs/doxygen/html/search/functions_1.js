@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7edetector',['~Detector',['../classDetector.html#ae16b7bf62f39cb287927d56ca17663d7',1,'Detector']]]
+  ['executedetectionpipeline',['executeDetectionPipeLine',['../classDriver.html#a33a612943ed1cbc375f0104a2a274b97',1,'Driver']]]
 ];
