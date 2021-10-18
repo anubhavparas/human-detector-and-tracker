@@ -78,6 +78,8 @@ Agile Development Process will be used in the development process with Test-Driv
 
 ## [Product Backlog](https://docs.google.com/spreadsheets/d/1DSndkYyvKeA0DBJtzWZuSUIHXLhYmBShil_r_3koDa0/edit#gid=0)
 
+## [AIP Sprint Sheet](https://drive.google.com/drive/folders/1sIxOGZRi_CUdVObPzQek-mL8ET90F8fe?usp=sharing)
+
 ## Tools and Technologies used
 - Ubuntu 18.04(LTS)
 - C++ 14+
