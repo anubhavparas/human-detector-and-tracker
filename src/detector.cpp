@@ -52,7 +52,26 @@ std::vector<Coord3D> HD::getRobotFrameCoordinates(
 
 void HD::displayOutput(const cv::Mat &image,
                        const DetectionOutput &predictionOutput) {
-  
+  Rectangles boundingBoxes = predictionOutput.getData().first;
+  std::vector<double> confidenceScores = predictionOutput.getData().second;
+  int i = 0;
+  for (cv::Rect &box : boundingBoxes) {
+    // draw bounding box
+    cv::rectangle(image, box.tl(), box.br(), cv::Scalar(0, 255, 0), 2);
+
+    std::string text = "ID: " + std::to_string(i + 1) + " | Score: "
+                        + std::to_string(confidenceScores[i]);
+
+    // put ID and confidence score
+    cv::putText(image, text, cv::Point(box.x, box.y + 50),
+                cv::FONT_HERSHEY_SIMPLEX,
+                1, cv::Scalar(0, 255, 0));
+
+    i++;
+  }
+
+  cv::imshow("Detected Humans", image);
+  cv::waitKey(100);
 }
 
 std::vector<Coord3D> HD::detect(const cv::Mat &inputData) {
