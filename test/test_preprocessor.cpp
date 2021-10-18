@@ -12,9 +12,12 @@ TEST(preprocessor_test, image_resize) {
     PreProcessor preProcessor;
     cv::Mat image = cv::imread(test_path);
     cv::Size originalSize = image.size();
-    cv::Size expectedSize = cv::Size();
+    cv::Size expectedSize = cv::Size(100, 100);
     preProcessor.resize(image, image, expectedSize);
 
-    EXPECT_FALSE(image.empty());
+    EXPECT_TRUE(image.size().height != originalSize.height);
+    EXPECT_EQ(image.size().height, expectedSize.height);
 
+    EXPECT_TRUE(image.size().width != originalSize.width);
+    EXPECT_EQ(image.size().width, expectedSize.width);
 }
