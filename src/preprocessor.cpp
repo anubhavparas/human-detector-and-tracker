@@ -8,5 +8,5 @@ PreProcessor::~PreProcessor() {}
 
 void PreProcessor::resize(const cv::Mat& input,
                             const cv::Mat& output, cv::Size size) {
-    
+    cv::resize(input, output, size);
 }
