@@ -1,6 +1,7 @@
 /** Copyright 2021 Sakshi Kakde, Siddharth Telang, Anubhav Paras */
 
 #include <detector.hpp>
+#include <memory>
 #include <iostream>
 #include <string>
 #include <opencv2/opencv.hpp>
@@ -10,22 +11,14 @@ typedef HumanDetector HD;
 HD::HumanDetector() {}
 
 
-HD::HumanDetector(Model<DetectionOutput, Image>* model,
-                  FrameTransformation* robotFrame) {
-  this->model = model;
-  this->robotFrame = robotFrame;
+HD::HumanDetector(std::unique_ptr<Model<DetectionOutput, Image>> model,
+                  std::unique_ptr<FrameTransformation> robotFrame) {
+    this->model = std::move(model);
+    this->robotFrame = std::move(robotFrame);
 }
 
 
 HD::~HumanDetector() {
-  if (this->model != nullptr) {
-    delete this->model;
-    this->model = nullptr;
-  }
-  if (this->robotFrame != nullptr) {
-    delete this->robotFrame;
-    this->robotFrame = nullptr;
-  }
 }
 
 std::vector<Coord2D> HD::getCentroids(const Rectangles& boundingBoxes) {

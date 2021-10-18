@@ -3,31 +3,17 @@
 #include <driver.hpp>
 
 Driver::Driver() {
-  this->dataReader = new ImageReader();
-  this->preProcessor = new PreProcessor();
-  this->humanDetector = new HumanDetector();
 }
 
-Driver::Driver(DataReader<cv::Mat> *dataReader, PreProcessor *preProcessor,
-               Detector *detector) {
-  this->dataReader = dataReader;
-  this->preProcessor = preProcessor;
-  this->humanDetector = detector;
+Driver::Driver(std::unique_ptr<DataReader<cv::Mat>> dataReader,
+         std::unique_ptr<PreProcessor> preProcessor,
+         std::unique_ptr<Detector> detector) {
+  this->dataReader = std::move(dataReader);
+  this->preProcessor = std::move(preProcessor);
+  this->humanDetector = std::move(detector);
 }
 
 Driver::~Driver() {
-    if (dataReader != nullptr) {
-        delete dataReader;
-        dataReader = nullptr;
-    }
-    if (preProcessor != nullptr) {
-        delete preProcessor;
-        preProcessor = nullptr;
-    }
-    if (humanDetector != nullptr) {
-        delete humanDetector;
-        humanDetector = nullptr;
-    }
 }
 
 bool Driver::executeDetectionPipeLine(std::string data_path) {

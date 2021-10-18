@@ -24,12 +24,15 @@ class Driver {
   Driver();
 
   /**
-   * @brief Construct a new Driver object by injecting dependencies
+   * @brief Construct a new Driver object
    * 
+   * @param dataReader to read the images or video/camera feed
+   * @param preProcessor for the preprocessing of the data 
+   * @param detector to detect the objects in the image data
    */
-  Driver(DataReader<cv::Mat>*,
-         PreProcessor*,
-         Detector*);
+  Driver(std::unique_ptr<DataReader<cv::Mat>> dataReader,
+         std::unique_ptr<PreProcessor> preProcessor,
+         std::unique_ptr<Detector> detector);
 
   /**
    * @brief Destroy the Driver object
@@ -45,13 +48,9 @@ class Driver {
   bool executeDetectionPipeLine(std::string data_path);
 
  private:
-  DataReader<cv::Mat>* dataReader;
-  PreProcessor* preProcessor;
-  Detector* humanDetector;
-  //   std::unique_ptr<DataReader<cv::Mat>> dataReader;
-  //   std::unique_ptr<PreProcessor> preProcessor;
-  //   std::unique_ptr<Model<DetectionOutput, Image>> humanDetectionModel;
-  //   std::unique_ptr<Detector> humanDetector;
+    std::unique_ptr<DataReader<cv::Mat>> dataReader;
+    std::unique_ptr<PreProcessor> preProcessor;
+    std::unique_ptr<Detector> humanDetector;
 };
 
 #endif  //  INCLUDE_DRIVER_HPP_
