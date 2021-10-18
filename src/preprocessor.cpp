@@ -8,5 +8,7 @@ PreProcessor::~PreProcessor() {}
 
 void PreProcessor::resize(cv::InputArray input,
                           cv::OutputArray output, cv::Size size) {
-    cv::resize(input, output, size);
+    if (size != cv::Size()) {
+        cv::resize(input, output, size);
+    }
 }
