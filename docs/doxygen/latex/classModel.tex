@@ -1,0 +1,62 @@
+\hypertarget{classModel}{}\section{Model$<$ T, U $>$ Class Template Reference}
+\label{classModel}\index{Model$<$ T, U $>$@{Model$<$ T, U $>$}}
+
+
+Abstract \hyperlink{classModel}{Model} class for all the ML models.  
+
+
+
+
+{\ttfamily \#include $<$model.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual T \hyperlink{classModel_aab70aeca992eb3a1ce09667e169b8743}{predict} (U data)=0
+\begin{DoxyCompactList}\small\item\em model to predict and return data of type T for any given input of type U \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T, class U$>$\newline
+class Model$<$ T, U $>$}
+
+Abstract \hyperlink{classModel}{Model} class for all the ML models. 
+
+Copyright 2021 Sakshi Kakde, Siddharth Telang, Anubhav Paras 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & return type of the prediction data \\
+\hline
+{\em U} & type of the input data used for prediction \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classModel_aab70aeca992eb3a1ce09667e169b8743}\label{classModel_aab70aeca992eb3a1ce09667e169b8743}} 
+\index{Model@{Model}!predict@{predict}}
+\index{predict@{predict}!Model@{Model}}
+\subsubsection{\texorpdfstring{predict()}{predict()}}
+{\footnotesize\ttfamily template$<$class T, class U$>$ \\
+virtual T \hyperlink{classModel}{Model}$<$ T, U $>$\+::predict (\begin{DoxyParamCaption}\item[{U}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+model to predict and return data of type T for any given input of type U 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & input data of type T for the prediction task \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T prediction data of type U 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classSVMHumanClassifier_a14a416a22355b1426d7611082dfa2464}{S\+V\+M\+Human\+Classifier}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/model.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,90 @@
+\hypertarget{classSVMHumanClassifier}{}\section{S\+V\+M\+Human\+Classifier Class Reference}
+\label{classSVMHumanClassifier}\index{S\+V\+M\+Human\+Classifier@{S\+V\+M\+Human\+Classifier}}
+
+
+Inheritance diagram for S\+V\+M\+Human\+Classifier\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classSVMHumanClassifier__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for S\+V\+M\+Human\+Classifier\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classSVMHumanClassifier__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSVMHumanClassifier_ab99099674465b0ffa8c79feeb9b9b66a}{S\+V\+M\+Human\+Classifier} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \hyperlink{classSVMHumanClassifier}{S\+V\+M\+Human\+Classifier} object. \end{DoxyCompactList}\item 
+virtual \hyperlink{classSVMHumanClassifier_a875ce0f61e85c8254f008b29f2c3a9b9}{$\sim$\+S\+V\+M\+Human\+Classifier} ()
+\begin{DoxyCompactList}\small\item\em Parameterized constructur to construct new \hyperlink{classSVMHumanClassifier}{S\+V\+M\+Human\+Classifier} object. \end{DoxyCompactList}\item 
+\hyperlink{classData}{Detection\+Output} \hyperlink{classSVMHumanClassifier_a14a416a22355b1426d7611082dfa2464}{predict} (Image input\+Data) override
+\begin{DoxyCompactList}\small\item\em predicts the classification output Takes an input image an returns the bounding boxes for the detected humans \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSVMHumanClassifier_ab99099674465b0ffa8c79feeb9b9b66a}\label{classSVMHumanClassifier_ab99099674465b0ffa8c79feeb9b9b66a}} 
+\index{S\+V\+M\+Human\+Classifier@{S\+V\+M\+Human\+Classifier}!S\+V\+M\+Human\+Classifier@{S\+V\+M\+Human\+Classifier}}
+\index{S\+V\+M\+Human\+Classifier@{S\+V\+M\+Human\+Classifier}!S\+V\+M\+Human\+Classifier@{S\+V\+M\+Human\+Classifier}}
+\subsubsection{\texorpdfstring{S\+V\+M\+Human\+Classifier()}{SVMHumanClassifier()}}
+{\footnotesize\ttfamily S\+V\+M\+Human\+Classifier\+::\+S\+V\+M\+Human\+Classifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \hyperlink{classSVMHumanClassifier}{S\+V\+M\+Human\+Classifier} object. 
+
+Copyright 2021 Sakshi Kakde, Siddharth Telang, Anubhav Paras \mbox{\Hypertarget{classSVMHumanClassifier_a875ce0f61e85c8254f008b29f2c3a9b9}\label{classSVMHumanClassifier_a875ce0f61e85c8254f008b29f2c3a9b9}} 
+\index{S\+V\+M\+Human\+Classifier@{S\+V\+M\+Human\+Classifier}!````~S\+V\+M\+Human\+Classifier@{$\sim$\+S\+V\+M\+Human\+Classifier}}
+\index{````~S\+V\+M\+Human\+Classifier@{$\sim$\+S\+V\+M\+Human\+Classifier}!S\+V\+M\+Human\+Classifier@{S\+V\+M\+Human\+Classifier}}
+\subsubsection{\texorpdfstring{$\sim$\+S\+V\+M\+Human\+Classifier()}{~SVMHumanClassifier()}}
+{\footnotesize\ttfamily S\+V\+M\+Human\+Classifier\+::$\sim$\+S\+V\+M\+Human\+Classifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Parameterized constructur to construct new \hyperlink{classSVMHumanClassifier}{S\+V\+M\+Human\+Classifier} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Model} & base S\+VM model to Destroy the \hyperlink{classSVMHumanClassifier}{S\+V\+M\+Human\+Classifier} object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSVMHumanClassifier_a14a416a22355b1426d7611082dfa2464}\label{classSVMHumanClassifier_a14a416a22355b1426d7611082dfa2464}} 
+\index{S\+V\+M\+Human\+Classifier@{S\+V\+M\+Human\+Classifier}!predict@{predict}}
+\index{predict@{predict}!S\+V\+M\+Human\+Classifier@{S\+V\+M\+Human\+Classifier}}
+\subsubsection{\texorpdfstring{predict()}{predict()}}
+{\footnotesize\ttfamily \hyperlink{classData}{Detection\+Output} S\+V\+M\+Human\+Classifier\+::predict (\begin{DoxyParamCaption}\item[{Image}]{input\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+predicts the classification output Takes an input image an returns the bounding boxes for the detected humans 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Data} & input image data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rectangles bounding boxes for all the humans detected 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classModel_aab70aeca992eb3a1ce09667e169b8743}{Model$<$ Detection\+Output, Image $>$}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/model.\+hpp\item 
+src/model.\+cpp\end{DoxyCompactItemize}
