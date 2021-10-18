@@ -45,9 +45,9 @@ Initially, we aim to train our model to extract features which would recognize h
 ## Design
 The following are the proposed designs for the human detector and tracker: 
 
-![alt text](./docs/images/HumanDetectorTracker_ClassDiagram.png?raw=true "PID Controller")
+![alt text](./UML/initial/HumanDetectorTracker_ClassDiagram.png?raw=true "PID Controller")
 
-Activity flow diagrams can be found [here](./docs/images/).
+Activity flow diagrams can be found [here](./UML/initial/).
 
 ## Development process
 Agile Development Process will be used in the development process with Test-Driven Development.
