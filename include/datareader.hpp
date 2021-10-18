@@ -46,5 +46,59 @@ class ImageReader : public DataReader<cv::Mat> {
   cv::Mat readData(std::string path = "") override;
 };
 
+// class VideoReader : public DataReader<cv::Mat> {
+//  public:
+//   /**
+//    * @brief Construct a new Video Reader object
+//    * 
+//    * @param path location of the video file
+//    */
+//   explicit VideoReader(std::string path);
+
+//   /**
+//    * @brief Destroy the Video Reader object
+//    * 
+//    */
+//   ~VideoReader();
+
+//   /**
+//    * @brief read the video type data from given string path
+//    * 
+//    * @param frame output frame
+//    * @param path 
+//    * @return cv::Mat output frame
+//    */
+//   cv::Mat readData(std::string path = "") override;
+
+//  private:
+//   std::unique_ptr<cv::VideoCapture> video_cap;
+// };
+
+// class CameraReader : public DataReader<cv::Mat> {
+//  public:
+//   /**
+//    * @brief Construct a new Camera Reader object
+//    * 
+//    */
+//   explicit CameraReader(int id);
+
+//   /**
+//    * @brief Destroy the Camera Reader object
+//    * 
+//    */
+//   ~CameraReader();
+
+//   /**
+//    * @brief read the feed from the camera and store that in the output frame
+//    * 
+//    * @param frame output frame
+//    * @param path 
+//    * @return cv::Mat output frame 
+//    */
+//   cv::Mat readData(std::string path = "") override;
+
+//  private:
+//   std::unique_ptr<cv::VideoCapture> video_cap;
+// };
 
 #endif  // INCLUDE_DATAREADER_HPP_
