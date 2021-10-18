@@ -22,6 +22,30 @@ Acme robotics would be launching their robotics based product next year and a hu
 
 Initially, we aim to train our model to extract features which would recognize humans in any given data set. We plan to use the INRIA Person Dataset to train our model. Given the data, a HoG would be generated. Next, these HOG vectors or features will be used to train a SVM classifier to detect the location of a human in any image. An error function will calculate the error made in classification which would be then fed to the classifier as a feedback to improve the accuracy. After the training is completed, the classifier would be able to detect the human position and draw a bounding box around it in real time feed from Monocular camera. In addition to this, the output of the classifier would be given to a tracking system to keep track of human(s) in real-time. Moreover, the tracked output will also be converted from image and camera frame to robot’s frame for further processing.
 
+## Licence
+MIT License
+
+Copyright (c) 2021 Anubhav Paras, Sakshi Kakde, Siddharth Telang
+```
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
 ## [QuadChart](./docs/QuadChart_Human_Detector_and_Tracker.pdf)
 
 ## [Proposal Report](./docs/Human_Detector_And_Tracker_Proposal.pdf)
