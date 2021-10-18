@@ -8,6 +8,7 @@ add_executable(
     test_detector.cpp
     test_model.cpp
     test_preprocessor.cpp
+    test_driver.cpp
 )
 
 target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include 
