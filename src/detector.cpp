@@ -30,7 +30,12 @@ HD::~HumanDetector() {
 
 std::vector<Coord2D> HD::getCentroids(const Rectangles& boundingBoxes) {
   std::vector<Coord2D> centroids;
-  
+  for (const cv::Rect& box : boundingBoxes) {
+    Coord2D centroid;
+    centroid.x = (box.tl().x + box.br().x)/2.0;
+    centroid.y = (box.tl().y + box.br().y)/2.0;
+    centroids.push_back(centroid);
+  }
   return centroids;
 }
 
@@ -49,8 +54,8 @@ void HD::displayOutput(const cv::Mat &image,
 
 std::vector<Coord3D> HD::detect(const cv::Mat &inputData) {
   std::cout << "Detecting objects" << std::endl;
-  
   std::vector<Coord3D> coordinates;
+
   return coordinates;
 }
 
