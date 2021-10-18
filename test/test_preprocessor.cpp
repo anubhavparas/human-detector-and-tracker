@@ -7,7 +7,7 @@
 
 
 TEST(preprocessor_test, image_resize) {
-    std::string test_path = "../docs/images/FudanPed00028.png";
+    std::string test_path = "../data/testdata/FudanPed00028.png";
 
     PreProcessor preProcessor;
     cv::Mat image = cv::imread(test_path);
