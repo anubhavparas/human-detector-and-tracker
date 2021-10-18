@@ -1,7 +1,7 @@
 /** Copyright 2021 Sakshi Kakde, Siddharth Telang, Anubhav Paras */
 
-#ifndef INCLUDE_MOCK_DETECTOR_HPP_
-#define INCLUDE_MOCK_DETECTOR_HPP_
+#ifndef INCLUDE_MOCK_MOCK_DETECTOR_HPP_
+#define INCLUDE_MOCK_MOCK_DETECTOR_HPP_
 
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
@@ -15,4 +15,4 @@ class MockDetector : public Detector {
   MOCK_METHOD1(detect, std::vector<Coord3D>(const cv::Mat &));
 };
 
-#endif  // INCLUDE_MOCK_DETECTOR_HPP_
+#endif  // INCLUDE_MOCK_MOCK_DETECTOR_HPP_
