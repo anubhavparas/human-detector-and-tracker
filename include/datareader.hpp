@@ -22,6 +22,29 @@ class DataReader {
   virtual T readData(U source) = 0;
 };
 
+class ImageReader : public DataReader<cv::Mat> {
+ public:
+  /**
+   * @brief Construct a new Image Reader object
+   * 
+   */
+  ImageReader();
+
+  /**
+   * @brief Destroy the Image Reader object
+   * 
+   */
+  ~ImageReader();
+
+  /**
+   * @brief read the image type data from given string path
+   * 
+   * 
+   * @param path location of the image file
+   * @return cv::Mat output frame
+   */
+  cv::Mat readData(std::string path = "") override;
+};
 
 
 #endif  // INCLUDE_DATAREADER_HPP_
