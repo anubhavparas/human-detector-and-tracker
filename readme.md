@@ -8,8 +8,8 @@ Module to detect and track humans and return their coordinate position.
 ---
 
 Authors: 
-- [Anubhav Paras](https://github.com/anubhavparas) (Navigator)
-- [Sakshi Kakde](https://github.com/sakshikakde) (Driver)
+- [Anubhav Paras](https://github.com/anubhavparas) (Driver)
+- [Sakshi Kakde](https://github.com/sakshikakde) (Navigator)
 - [Siddharth Telang](https://github.com/siddharthtelang) (Design Keeper)
 
 ## Overview
@@ -21,6 +21,30 @@ Numerous human object detectors have been developed till date which work very sm
 Acme robotics would be launching their robotics based product next year and a human detection and tracking system is the heart of that product. They have given us the complete ownership of designing and developing this detector and tracker. For this application, we aim to use Histogram of Features(HoG) with a Support Vector Machine(SVM) classifier.
 
 Initially, we aim to train our model to extract features which would recognize humans in any given data set. We plan to use the INRIA Person Dataset to train our model. Given the data, a HoG would be generated. Next, these HOG vectors or features will be used to train a SVM classifier to detect the location of a human in any image. An error function will calculate the error made in classification which would be then fed to the classifier as a feedback to improve the accuracy. After the training is completed, the classifier would be able to detect the human position and draw a bounding box around it in real time feed from Monocular camera. In addition to this, the output of the classifier would be given to a tracking system to keep track of human(s) in real-time. Moreover, the tracked output will also be converted from image and camera frame to robot’s frame for further processing.
+
+## Licence
+MIT License
+
+Copyright (c) 2021 Anubhav Paras, Sakshi Kakde, Siddharth Telang
+```
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
 
 ## [QuadChart](./docs/QuadChart_Human_Detector_and_Tracker.pdf)
 
@@ -45,14 +69,16 @@ Initially, we aim to train our model to extract features which would recognize h
 ## Design
 The following are the proposed designs for the human detector and tracker: 
 
-![alt text](./docs/images/HumanDetectorTracker_ClassDiagram.png?raw=true "PID Controller")
+![alt text](./UML/initial/HumanDetectorTracker_ClassDiagram.png?raw=true "Human Detecttor Class Diagram")
 
-Activity flow diagrams can be found [here](./docs/images/).
+Activity flow diagrams can be found [here](./UML/initial/).
 
-## Deveopment process
+## Development process
 Agile Development Process will be used in the development process with Test-Driven Development.
 
 ## [Product Backlog](https://docs.google.com/spreadsheets/d/1DSndkYyvKeA0DBJtzWZuSUIHXLhYmBShil_r_3koDa0/edit#gid=0)
+
+## [AIP Sprint Sheet](https://drive.google.com/drive/folders/1sIxOGZRi_CUdVObPzQek-mL8ET90F8fe?usp=sharing)
 
 ## Tools and Technologies used
 - Ubuntu 18.04(LTS)
@@ -62,14 +88,55 @@ Agile Development Process will be used in the development process with Test-Driv
 - Travis CI
 - Coveralls
 
-## Dependencies
+## Dependencies with licenses
 - OpenCV 4.5.0 (covered under the open-source Apache 2 License)
-- Eigen 3.4.0
-- Boost 1.65
-- GMock
-- GTest
+- Eigen 3.4 the Mozilla Public License 2.0
+- Boost 1.65 Boost software license
+- GMock BSD 3-Clause "New" or "Revised" License
+- GTest BSD 3-Clause "New" or "Revised" License
+
+## Dataset
+
+We are using the INRIA dataset.
+
+Instructions to fetch the dataset:
+- Run
+```
+wget ftp://ftp.inrialpes.fr/pub/lear/douze/data/INRIAPerson.tar
+```
+- Extract the images from the dataset into a [testdata](./data/testdata) folder of the repository.
+
+
 
 ## Standard install via command-line
+
+### Install Dependencies
+```
+# Coverage
+sudo apt-get install -y -qq lcov
+
+# OpenCV install
+sudo apt-get install -y build-essential
+sudo apt-get install -y cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+sudo apt-get install -y python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
+
+# Download v3.3.0
+curl -sL https://github.com/Itseez/opencv/archive/3.3.0.zip > opencv.zip
+unzip opencv.zip
+cd opencv-3.3.0
+mkdir build
+cd build
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_QT=ON -D WITH_OPENGL=ON ..
+make -j4
+sudo make install
+
+sudo sh -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
+sudo ldconfig
+cd ../../
+```
+
+### Running the code
+
 ```
 git clone --recursive https://github.com/anubhavparas/human-detector-and-tracker.git
 cd <path to repository>
