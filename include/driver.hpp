@@ -3,12 +3,12 @@
 #ifndef INCLUDE_DRIVER_HPP_
 #define INCLUDE_DRIVER_HPP_
 
+#include <memory>
+#include <string>
 #include <datareader.hpp>
 #include <detector.hpp>
-#include <memory>
 #include <model.hpp>
 #include <preprocessor.hpp>
-#include <string>
 #include <types.hpp>
 
 /**
