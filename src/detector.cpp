@@ -41,9 +41,12 @@ std::vector<Coord2D> HD::getCentroids(const Rectangles& boundingBoxes) {
 
 std::vector<Coord3D> HD::getRobotFrameCoordinates(
                                 const Rectangles& boundingBoxes) {
-  
+  std::vector<Coord2D> centroids = this->getCentroids(boundingBoxes);
   std::vector<Coord3D> robotFrameCoordinates;
-  
+  for (const Coord2D& centroid : centroids) {
+    Coord3D robotFrameCoord = this->robotFrame->getRobotFrame(centroid);
+    robotFrameCoordinates.push_back(robotFrameCoord);
+  }
   return robotFrameCoordinates;
 }
 
