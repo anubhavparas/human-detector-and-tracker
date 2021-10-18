@@ -76,7 +76,20 @@ void HD::displayOutput(const cv::Mat &image,
 
 std::vector<Coord3D> HD::detect(const cv::Mat &inputData) {
   std::cout << "Detecting objects" << std::endl;
-  std::vector<Coord3D> coordinates;
+  DetectionOutput predictionOutput = this->model->predict(inputData);
+  Rectangles boundingBoxes = predictionOutput.getData().first;
+  if (boundingBoxes.size() < 1) {
+    std::cout << "No humans detected for the given image." << std::endl;
+    return {};
+  }
+
+  // get coordinates in robot frame:
+  // TODO(Anubhav, Sakshi)
+  std::vector<Coord3D> coordinates =
+                          this->getRobotFrameCoordinates(boundingBoxes);
+
+  // draw bounding boxes for each detected human and set the id
+  this->displayOutput(inputData, predictionOutput);
 
   return coordinates;
 }
