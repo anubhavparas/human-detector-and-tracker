@@ -1,3 +1,5 @@
-add_executable(shell-app main.cpp)
-
-target_link_libraries(shell-app PRIVATE human_detector_tracker)
+add_executable(human-detect-app main.cpp)
+# include_directories(
+#     ${OpenCV_INCLUDE_DIRS}	
+# )
+target_link_libraries(human-detect-app PRIVATE human_detector_tracker ${OpenCV_LIBS})
