@@ -32,7 +32,8 @@ class Driver {
    */
   Driver(std::unique_ptr<DataReader<cv::Mat>> dataReader,
          std::unique_ptr<PreProcessor> preProcessor,
-         std::unique_ptr<Detector> detector);
+         std::unique_ptr<Detector> detector,
+         bool isTestMode);
 
   /**
    * @brief Destroy the Driver object
@@ -51,6 +52,7 @@ class Driver {
     std::unique_ptr<DataReader<cv::Mat>> dataReader;
     std::unique_ptr<PreProcessor> preProcessor;
     std::unique_ptr<Detector> humanDetector;
+    bool isTestMode;
 };
 
 #endif  //  INCLUDE_DRIVER_HPP_

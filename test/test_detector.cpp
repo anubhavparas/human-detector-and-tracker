@@ -38,7 +38,7 @@ TEST(detector_test, test_detect) {
     // ACT
     Detector* detector = new HumanDetector(std::move(mockModel),
                                            std::move(mockFrameTR));
-    std::vector<Coord3D> detectionOut = detector->detect(image);
+    std::vector<Coord3D> detectionOut = detector->detect(image, true);
 
     EXPECT_EQ(detectionOut.at(0).x, expectedFrame.x);
     EXPECT_EQ(detectionOut.at(0).y, expectedFrame.y);
@@ -72,7 +72,7 @@ TEST(detector_test, test_detect_no_boundingbox) {
     // ACT
     Detector* detector = new HumanDetector(std::move(mockModel),
                                            std::move(mockFrameTR));
-    std::vector<Coord3D> detectionOut = detector->detect(image);
+    std::vector<Coord3D> detectionOut = detector->detect(image, true);
 
     EXPECT_EQ(0, detectionOut.size());
 

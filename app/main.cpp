@@ -28,7 +28,8 @@ int main() {
 
   Driver* detectionDriver = new Driver(std::move(dataReader),
                                        std::move(preProcessor),
-                                       std::move(humanDetector));
+                                       std::move(humanDetector),
+                                       false);
 
   std::string test_dir = "../data/testdata";
   detectionDriver->executeDetectionPipeLine(test_dir);

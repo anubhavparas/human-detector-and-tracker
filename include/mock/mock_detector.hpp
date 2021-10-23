@@ -12,7 +12,7 @@
 
 class MockDetector : public Detector {
  public:
-  MOCK_METHOD1(detect, std::vector<Coord3D>(const cv::Mat &));
+  MOCK_METHOD2(detect, std::vector<Coord3D>(const cv::Mat &, bool));
 };
 
 #endif  // INCLUDE_MOCK_MOCK_DETECTOR_HPP_
