@@ -34,14 +34,15 @@ TEST(driver_test, test_executeDetectionPipeLine) {
     EXPECT_CALL(*mockPreProcessor, resize(_, _, _))
                 .Times(::testing::AnyNumber());
 
-    EXPECT_CALL(*mockDetector, detect(_))
+    EXPECT_CALL(*mockDetector, detect(_, _))
                 .WillRepeatedly(::testing::Return(locations));
 
     // ACT
     Driver* detectionDriver = new Driver(
                     std::move(mockDataReader),
                     std::move(mockPreProcessor),
-                    std::move(mockDetector));
+                    std::move(mockDetector),
+                    true);
     bool status = detectionDriver->executeDetectionPipeLine(test_dir);
 
     EXPECT_TRUE(status);

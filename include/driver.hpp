@@ -29,10 +29,12 @@ class Driver {
    * @param dataReader to read the images or video/camera feed
    * @param preProcessor for the preprocessing of the data 
    * @param detector to detect the objects in the image data
+   * @param isTestMode to check if Driver is being instantiated while unit testing
    */
   Driver(std::unique_ptr<DataReader<cv::Mat>> dataReader,
          std::unique_ptr<PreProcessor> preProcessor,
-         std::unique_ptr<Detector> detector);
+         std::unique_ptr<Detector> detector,
+         bool isTestMode);
 
   /**
    * @brief Destroy the Driver object
@@ -51,6 +53,7 @@ class Driver {
     std::unique_ptr<DataReader<cv::Mat>> dataReader;
     std::unique_ptr<PreProcessor> preProcessor;
     std::unique_ptr<Detector> humanDetector;
+    bool isTestMode;
 };
 
 #endif  //  INCLUDE_DRIVER_HPP_

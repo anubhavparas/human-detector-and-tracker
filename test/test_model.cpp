@@ -15,7 +15,7 @@ TEST(svm_model_test, check_prediction_with_human) {
     Rectangles boundingBoxes = detectionOut.getData().first;
     std::vector<double> scores = detectionOut.getData().second;
 
-    EXPECT_GT(boundingBoxes.size(), 0);
+    EXPECT_GT(static_cast<int>(boundingBoxes.size()), 0);
     EXPECT_EQ(boundingBoxes.size(), scores.size());
 
     delete svmModel;

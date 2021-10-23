@@ -44,7 +44,7 @@ std::vector<Coord3D> HD::getRobotFrameCoordinates(
 }
 
 void HD::displayOutput(const cv::Mat &image,
-                       const DetectionOutput &predictionOutput) {
+                       const DetectionOutput &predictionOutput, bool isTestMode) {
   Rectangles boundingBoxes = predictionOutput.getData().first;
   std::vector<double> confidenceScores = predictionOutput.getData().second;
   int i = 0;
@@ -62,12 +62,14 @@ void HD::displayOutput(const cv::Mat &image,
 
     i++;
   }
+  if (!isTestMode) {
+    cv::imshow("Detected Humans", image);
+    cv::waitKey(600);
+  }
 
-  cv::imshow("Detected Humans", image);
-  cv::waitKey(600);
 }
 
-std::vector<Coord3D> HD::detect(const cv::Mat &inputData) {
+std::vector<Coord3D> HD::detect(const cv::Mat &inputData, bool isTestMode) {
   std::cout << "Detecting objects" << std::endl;
   DetectionOutput predictionOutput = this->model->predict(inputData);
   Rectangles boundingBoxes = predictionOutput.getData().first;
@@ -82,7 +84,7 @@ std::vector<Coord3D> HD::detect(const cv::Mat &inputData) {
                           this->getRobotFrameCoordinates(boundingBoxes);
 
   // draw bounding boxes for each detected human and set the id
-  this->displayOutput(inputData, predictionOutput);
+  this->displayOutput(inputData, predictionOutput, isTestMode);
 
   return coordinates;
 }
