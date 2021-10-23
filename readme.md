@@ -2,8 +2,8 @@
 
 Module to detect and track humans and return their coordinate position.
 
-[![Build Status](https://app.travis-ci.com/sakshikakde/human-detector-and-tracker.svg?branch=main)](https://app.travis-ci.com/github/sakshikakde/human-detector-and-tracker)
-[![Coverage Status](https://coveralls.io/repos/github/sakshikakde/human-detector-and-tracker/badge.png?branch=main)](https://coveralls.io/github/anubhavparas/human-detector-and-tracker?branch=main)
+[![Build Status](https://app.travis-ci.com/sakshikakde/human-detector-and-tracker.svg?branch=phase2/devel)](https://app.travis-ci.com/github/sakshikakde/human-detector-and-tracker)
+[![Coverage Status](https://coveralls.io/repos/github/sakshikakde/human-detector-and-tracker/badge.png?branch=phase2/devel)](https://coveralls.io/github/sakshikakde/human-detector-and-tracker?branch=phase2/devel)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ---
 
