@@ -74,7 +74,7 @@ TEST(detector_test, test_detect_no_boundingbox) {
                                            std::move(mockFrameTR));
     std::vector<Coord3D> detectionOut = detector->detect(image, true);
 
-    EXPECT_EQ(0, detectionOut.size());
+    EXPECT_EQ(static_cast<int>(detectionOut.size()), 0);
 
     delete detector;
     detector = nullptr;

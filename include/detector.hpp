@@ -53,6 +53,7 @@ class HumanDetector : public Detector {
    * displays the bounding boxes and the ids of all the humans detected
    * 
    * @param inputData input image data 
+   * @param isTestMode to check if detect is being called while unit testing
    * @return std::vector<Coord3D> coordinates of all the detected humans
    * in robot frame
    */
@@ -85,6 +86,7 @@ class HumanDetector : public Detector {
    * @brief display the output with bounding boxes, confidence scores and id
    * 
    * @param inputData image data 
+   * @param isTestMode to toggle the display of output image
    * @param predictionOutput pair of bounding boxes and respective scores
    */
   void displayOutput(const cv::Mat &inputData,
