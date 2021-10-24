@@ -1,0 +1,86 @@
+\hypertarget{classHumanDetector}{}\section{Human\+Detector Class Reference}
+\label{classHumanDetector}\index{Human\+Detector@{Human\+Detector}}
+
+
+Inheritance diagram for Human\+Detector\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classHumanDetector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Human\+Detector\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classHumanDetector__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classHumanDetector_adbdfd2cfc3579f254de16aba058cab06}\label{classHumanDetector_adbdfd2cfc3579f254de16aba058cab06}} 
+\hyperlink{classHumanDetector_adbdfd2cfc3579f254de16aba058cab06}{Human\+Detector} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Human \hyperlink{classDetector}{Detector} object. \end{DoxyCompactList}\item 
+\hyperlink{classHumanDetector_ad24009d2c6d212e037ee2ae46a9b9c05}{Human\+Detector} (std\+::unique\+\_\+ptr$<$ \hyperlink{classModel}{Model}$<$ \hyperlink{classData}{Detection\+Output}, Image $>$$>$ model, std\+::unique\+\_\+ptr$<$ \hyperlink{classFrameTransformation}{Frame\+Transformation} $>$ robot\+Frame)
+\begin{DoxyCompactList}\small\item\em Construct a new Human \hyperlink{classDetector}{Detector} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHumanDetector_a14a3f12c65510640240522c9e064b5f6}\label{classHumanDetector_a14a3f12c65510640240522c9e064b5f6}} 
+\hyperlink{classHumanDetector_a14a3f12c65510640240522c9e064b5f6}{$\sim$\+Human\+Detector} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Human \hyperlink{classDetector}{Detector} object. \end{DoxyCompactList}\item 
+std\+::vector$<$ Coord3D $>$ \hyperlink{classHumanDetector_a3883a91447922d9b4bfc8ade8281f947}{detect} (const cv\+::\+Mat \&input\+Data) override
+\begin{DoxyCompactList}\small\item\em detects the humans in a given image data displays the bounding boxes and the ids of all the humans detected \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHumanDetector_ad24009d2c6d212e037ee2ae46a9b9c05}\label{classHumanDetector_ad24009d2c6d212e037ee2ae46a9b9c05}} 
+\index{Human\+Detector@{Human\+Detector}!Human\+Detector@{Human\+Detector}}
+\index{Human\+Detector@{Human\+Detector}!Human\+Detector@{Human\+Detector}}
+\subsubsection{\texorpdfstring{Human\+Detector()}{HumanDetector()}}
+{\footnotesize\ttfamily H\+D\+::\+Human\+Detector (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classModel}{Model}$<$ \hyperlink{classData}{Detection\+Output}, Image $>$$>$}]{model,  }\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classFrameTransformation}{Frame\+Transformation} $>$}]{robot\+Frame }\end{DoxyParamCaption})}
+
+
+
+Construct a new Human \hyperlink{classDetector}{Detector} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & model used to predict and fetch the bounding boxes \\
+\hline
+{\em robot\+Frame} & frame transformation to get the coordinates in robot frame \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classHumanDetector_a3883a91447922d9b4bfc8ade8281f947}\label{classHumanDetector_a3883a91447922d9b4bfc8ade8281f947}} 
+\index{Human\+Detector@{Human\+Detector}!detect@{detect}}
+\index{detect@{detect}!Human\+Detector@{Human\+Detector}}
+\subsubsection{\texorpdfstring{detect()}{detect()}}
+{\footnotesize\ttfamily std\+::vector$<$ Coord3D $>$ H\+D\+::detect (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{input\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+detects the humans in a given image data displays the bounding boxes and the ids of all the humans detected 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Data} & input image data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Coord3\+D$>$ coordinates of all the detected humans in robot frame 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDetector_a70a59ddd18ef4015a74d158e7d70aba4}{Detector}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/detector.\+hpp\item 
+src/detector.\+cpp\end{DoxyCompactItemize}

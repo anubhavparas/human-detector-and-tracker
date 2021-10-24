@@ -62,7 +62,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classDetector-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Detector Class Reference</div>  </div>
+<div class="title">Detector Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -70,48 +70,27 @@ $(function() {
  <a href="classDetector.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="detector_8hpp_source.html">detector.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Detector:</div>
+<div class="dyncontent">
+<div class="center"><img src="classDetector__inherit__graph.png" border="0" usemap="#Detector_inherit__map" alt="Inheritance graph"/></div>
+<map name="Detector_inherit__map" id="Detector_inherit__map">
+<area shape="rect" id="node2" href="classHumanDetector.html" title="HumanDetector" alt="" coords="5,80,120,107"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa43b3d7bbd4b225855b4bcc93f70b225"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetector.html#aa43b3d7bbd4b225855b4bcc93f70b225">Detector</a> ()</td></tr>
-<tr class="memdesc:aa43b3d7bbd4b225855b4bcc93f70b225"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classDetector.html" title="Generic object detection class. ">Detector</a> object.  <a href="#aa43b3d7bbd4b225855b4bcc93f70b225">More...</a><br /></td></tr>
-<tr class="separator:aa43b3d7bbd4b225855b4bcc93f70b225"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae16b7bf62f39cb287927d56ca17663d7"><td class="memItemLeft" align="right" valign="top"><a id="ae16b7bf62f39cb287927d56ca17663d7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetector.html#ae16b7bf62f39cb287927d56ca17663d7">~Detector</a> ()</td></tr>
-<tr class="memdesc:ae16b7bf62f39cb287927d56ca17663d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="classDetector.html" title="Generic object detection class. ">Detector</a> object. <br /></td></tr>
-<tr class="separator:ae16b7bf62f39cb287927d56ca17663d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0c0a72fef22d6521e82c18424a4dd04"><td class="memItemLeft" align="right" valign="top"><a id="ae0c0a72fef22d6521e82c18424a4dd04"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetector.html#ae0c0a72fef22d6521e82c18424a4dd04">detect</a> ()</td></tr>
-<tr class="memdesc:ae0c0a72fef22d6521e82c18424a4dd04"><td class="mdescLeft">&#160;</td><td class="mdescRight">detects objects in image <br /></td></tr>
-<tr class="separator:ae0c0a72fef22d6521e82c18424a4dd04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70a59ddd18ef4015a74d158e7d70aba4"><td class="memItemLeft" align="right" valign="top"><a id="a70a59ddd18ef4015a74d158e7d70aba4"></a>
+virtual std::vector&lt; Coord3D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetector.html#a70a59ddd18ef4015a74d158e7d70aba4">detect</a> (const cv::Mat &amp;inputData)=0</td></tr>
+<tr class="memdesc:a70a59ddd18ef4015a74d158e7d70aba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">detects objects in image <br /></td></tr>
+<tr class="separator:a70a59ddd18ef4015a74d158e7d70aba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generic object detection class. </p>
 <p>Copyright 2021 Sakshi Kakde, Siddharth Telang, Anubhav Paras </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa43b3d7bbd4b225855b4bcc93f70b225"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa43b3d7bbd4b225855b4bcc93f70b225">&#9670;&nbsp;</a></span>Detector()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Detector::Detector </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct a new <a class="el" href="classDetector.html" title="Generic object detection class. ">Detector</a> object. </p>
-<p>Copyright 2021 Sakshi Kakde, Siddharth Telang, Anubhav Paras </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="detector_8hpp_source.html">detector.hpp</a></li>
-<li>src/detector.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
