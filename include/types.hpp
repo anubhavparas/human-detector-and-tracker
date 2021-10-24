@@ -3,12 +3,14 @@
 #ifndef INCLUDE_TYPES_HPP_
 #define INCLUDE_TYPES_HPP_
 
+#include <Eigen/Dense>
 #include <utility>
 #include <vector>
 
 #include <opencv2/opencv.hpp>
 #include <opencv2/core.hpp>
 #include <data.hpp>
+
 
 typedef std::vector<cv::Rect> Rectangles;
 typedef cv::InputArray Image;
