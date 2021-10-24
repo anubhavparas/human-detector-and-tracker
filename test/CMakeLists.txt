@@ -9,6 +9,7 @@ add_executable(
     test_model.cpp
     test_preprocessor.cpp
     test_driver.cpp
+    test_frame_transformation.cpp
 )
 
 target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include 
