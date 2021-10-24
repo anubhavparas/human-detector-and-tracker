@@ -27,8 +27,13 @@ Coord3D FrameTransformation::getRobotFrame(Coord2D imageCoordinates) {
   Eigen::MatrixXf X = P_inv * x;
   // populate Coord3D
   Coord3D X_robot;
-  X_robot.x = X(0, 0) / X(3, 0);
-  X_robot.y = X(1, 0) / X(3, 0);
-  X_robot.z = X(2, 0) / X(3, 0);
+  if (X(3, 0) != 0) {
+    X_robot.x = X(0, 0) / X(3, 0);
+    X_robot.y = X(1, 0) / X(3, 0);
+    X_robot.z = X(2, 0) / X(3, 0);
+  } else {
+    return Coord3D(0, 0, 0);
+  }
+
   return X_robot;
 }
