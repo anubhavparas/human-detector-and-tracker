@@ -37,8 +37,6 @@
 
 #include <fstream>
 
-Driver::Driver() {
-}
 
 Driver::Driver(std::unique_ptr<DataReader<cv::Mat>> dataReader,
          std::unique_ptr<PreProcessor> preProcessor,

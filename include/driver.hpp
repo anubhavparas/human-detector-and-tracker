@@ -54,12 +54,6 @@ class Driver {
   /**
    * @brief Construct a new Driver object
    * 
-   */
-  Driver();
-
-  /**
-   * @brief Construct a new Driver object
-   * 
    * @param dataReader to read the images or video/camera feed
    * @param preProcessor for the preprocessing of the data 
    * @param detector to detect the objects in the image data

@@ -69,9 +69,9 @@ SOFTWARE.
 ## Design
 The following are the proposed designs for the human detector and tracker: 
 
-![alt text](./UML/initial/HumanDetectorTracker_ClassDiagram.png?raw=true "Human Detector Class Diagram")
+![alt text](./UML/revised/HumanDetectorTracker_ClassDiagram.png?raw=true "Human Detector Class Diagram")
 
-Activity flow diagrams can be found [here](./UML/initial/).
+Activity flow diagrams can be found [here](./UML/revised/).
 
 ## Development process
 Agile Development Process will be used in the development process with Test-Driven Development.
