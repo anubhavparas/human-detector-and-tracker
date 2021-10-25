@@ -13,3 +13,7 @@ build/
 # Vscode
 .vscode/
 ./vscode/settings.json
+
+# test
+data/testdata/pos
+data/testdata/ground_truth
