@@ -108,7 +108,7 @@ Instructions to fetch the dataset:
 
 - [ground_truth](./data/testdata/ground_truth) folder contains the ground truth centroid values.
 
-- These two folders contain three test files for dummy runs.
+- These two folders contain four test files for dummy runs.
 
 ```
 |--data
