@@ -53,7 +53,7 @@ Driver::Driver(std::unique_ptr<DataReader<cv::Mat>> dataReader,
 Driver::~Driver() {
 }
 
-bool Driver::executeDetectionPipeLine(const &std::string data_path) {
+bool Driver::executeDetectionPipeLine(const std::string& data_path) {
     std::vector<cv::String> filePaths;
     cv::glob(data_path, filePaths);
 
@@ -98,7 +98,7 @@ std::vector<Centroid> Driver::read_groundtruth_centroids(std::string file) {
 }
 
 
-double Driver::evaluateModel(std::string& data_path) {
+double Driver::evaluateModel(const std::string& data_path) {
     std::vector<cv::String> filePaths;
     std::string imagePath = data_path + "/pos";
     std::string groundTruthPath = data_path + "/ground_truth/";
