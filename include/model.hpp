@@ -60,7 +60,10 @@ class Model {
    * @return T prediction data of type U
    */
   virtual T predict(U data) = 0;
-
+/**
+ * @brief Destroy the Model object
+ * 
+ */
   virtual ~Model() {}
 };
 

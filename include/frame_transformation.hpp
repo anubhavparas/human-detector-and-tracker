@@ -39,10 +39,29 @@
 #include <vector>
 #include <types.hpp>
 
+/**
+ * @brief Class responsible to convert the coordinates from camera frame
+ * to robot frame
+ * 
+ */
 class FrameTransformation {
  public:
+ /**
+  * @brief Construct a new Frame Transformation object
+  * 
+  */
   FrameTransformation();
+  /**
+   * @brief Destroy the Frame Transformation object
+   * 
+   */
   virtual ~FrameTransformation();
+  /**
+   * @brief Get the Robot Frame object
+   * 
+   * @param imageCoordinates coordinates in camera frame
+   * @return Coord3D coordinates in robot frame
+   */
   virtual Coord3D getRobotFrame(Coord2D imageCoordinates);
  private:
   Eigen::MatrixXf K;  // intrinsic parameter matrix
