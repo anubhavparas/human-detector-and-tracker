@@ -105,7 +105,7 @@ class Driver {
      * @param file file where centroids information for a image is stored
      * return vector of ground truth centroids of detected bounding boxes
      */
-    std::vector<Centroid> read_groundtruth_centroids(std::string file);
+    std::vector<Centroid> readGroundTruthCentroids(std::string file);
 };
 
 #endif  //  INCLUDE_DRIVER_HPP_

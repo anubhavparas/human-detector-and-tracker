@@ -45,10 +45,10 @@ class FrameTransformation {
   virtual ~FrameTransformation();
   virtual Coord3D getRobotFrame(Coord2D imageCoordinates);
  private:
-  Eigen::MatrixXf K;
-  Eigen::MatrixXf T_c;
-  Eigen::MatrixXf T_r;
-  Eigen::MatrixXf P;
+  Eigen::MatrixXf K;  // intrinsic parameter matrix
+  Eigen::MatrixXf T_c;  // extrinsic parameterm matrix
+  Eigen::MatrixXf T_r;  // robot to camera matrix
+  Eigen::MatrixXf P;  // overall projection matrix
 };
 
 #endif  // INCLUDE_FRAME_TRANSFORMATION_HPP_
