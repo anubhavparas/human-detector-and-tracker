@@ -70,7 +70,7 @@ bool Driver::executeDetectionPipeLine(const std::string& data_path) {
         // print the coordinates:
         std::cout << "For frame at " << file << "humans are at: " << std::endl;
         for (auto& coordinate : locations) {
-            std::cout << "("
+            std::cout << "(x, y, z): ("
                       << coordinate.x << ","
                       << coordinate.y << ","
                       << coordinate.z << ")\n"
