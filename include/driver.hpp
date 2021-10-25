@@ -48,7 +48,7 @@ class Driver {
    * 
    * @param data_path 
    */
-  bool executeDetectionPipeLine(std::string data_path);
+  bool executeDetectionPipeLine(const std::string& data_path);
 
   /**
    * @brief To evaluate the performance of the detector
@@ -57,7 +57,7 @@ class Driver {
    * @return double average error in the detected bounding boxes 
    * across all the test images
    */
-  double evaluateModel(std::string data_path);
+  double evaluateModel(const std::string& data_path);
 
  private:
     std::unique_ptr<DataReader<cv::Mat>> dataReader;
