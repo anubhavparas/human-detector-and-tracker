@@ -121,10 +121,11 @@ Instructions to fetch the dataset:
 
 ## Results
 
-Detection output of running the detection model over the INRIA test data. [Video](https://drive.google.com/file/d/1JiiD9xUopTIC3foAmCpUVGNx5wZsVAEo/view?usp=sharing)
+- Detection output of running the detection model over the INRIA test data. [Video](https://drive.google.com/file/d/1JiiD9xUopTIC3foAmCpUVGNx5wZsVAEo/view?usp=sharing)
 
 ![alt text](./docs/media/human_detection_result.gif?raw=true "Human Detector Result")
 
+- Detection output of running the detection model over live camera feed. [Video](https://drive.google.com/file/d/1k0gt8TGLcTtxaLj-Ekj7eYVgZGO9zSJb/view?usp=sharing)
 ![alt text](./docs/media/humans_webcam.gif?raw=true "Human Detector Result on live feed")
 ## Standard install via command-line
 
