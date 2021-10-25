@@ -31,7 +31,7 @@ int main() {
                                        std::move(humanDetector),
                                        false);
 
-  std::string test_dir = "../data/testdata";
+  std::string test_dir = "../data/testdata/pos";
   detectionDriver->executeDetectionPipeLine(test_dir);
 
   delete detectionDriver;
