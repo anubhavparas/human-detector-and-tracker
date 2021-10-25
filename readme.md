@@ -215,6 +215,25 @@ Run cpplint: Results are stored in `./results/cpplint_result.txt`
 sh run_cpplint.sh
 ```
 
+No cpp-lint and cpp-check issues were found.
+
+## Valgrind check:
+- No memory leaks or error were found due the development code.
+- No memory chunks were 'definitely (directly or indirectly)' lost.
+- Though, there were issues/memory checks related to opencv and other third party libraries.
+- Results can be found [here](./results/valgrind_results).
+- To run valgrind: 
+```
+mkdir build
+cd build/
+cmake ..
+make
+valgrind --leak-check=full <path of the executable>
+```
+
+
+
+
 ## Known issues
 1) Highly depends on lighting conditions
 2) Depends on the image contrast
