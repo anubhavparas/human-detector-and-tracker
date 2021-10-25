@@ -183,6 +183,8 @@ Run the model evaluation test: ./app/evaluate-human-detect-app
 ```
 
 - Results of the model evaluation test: The error was calculated on the basis of shift of the centroids of the detected bounding boxes and the ground truth centroids. The error (pixel shift) for the test data can be considered to be the mean centroid shift (in pixels) in each image.
+- Error calculation is as per the image below:
+![alt text](./docs/media/error.png?raw=true "Error is detection") 
 - Mean error in data calculated: **43.3 pixel units**.
 
 
