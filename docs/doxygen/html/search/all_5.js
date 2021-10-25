@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['imagereader',['ImageReader',['../classImageReader.html',1,'ImageReader'],['../classImageReader.html#a2b24331603b06f5c218212c26a3ee24b',1,'ImageReader::ImageReader()']]]
+  ['humandetector',['HumanDetector',['../classHumanDetector.html',1,'HumanDetector'],['../classHumanDetector.html#ad24009d2c6d212e037ee2ae46a9b9c05',1,'HumanDetector::HumanDetector()']]]
 ];

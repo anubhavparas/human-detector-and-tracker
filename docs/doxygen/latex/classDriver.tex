@@ -12,38 +12,26 @@ This class is responsible for executing the complete detection pipline.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classDriver_af0658d103e3e810a8e9ef0a53bb2e261}{Driver} ()
-\begin{DoxyCompactList}\small\item\em Construct a new \hyperlink{classDriver}{Driver} object. \end{DoxyCompactList}\item 
-\hyperlink{classDriver_a6c9f75abe2410437cd3a0091d2ed41b3}{Driver} (std\+::unique\+\_\+ptr$<$ \hyperlink{classDataReader}{Data\+Reader}$<$ cv\+::\+Mat $>$$>$ data\+Reader, std\+::unique\+\_\+ptr$<$ \hyperlink{classPreProcessor}{Pre\+Processor} $>$ pre\+Processor, std\+::unique\+\_\+ptr$<$ \hyperlink{classDetector}{Detector} $>$ detector)
+\hyperlink{classDriver_a00a14ae9c9847d0012185e6ca34dde98}{Driver} (std\+::unique\+\_\+ptr$<$ \hyperlink{classDataReader}{Data\+Reader}$<$ cv\+::\+Mat $>$$>$ data\+Reader, std\+::unique\+\_\+ptr$<$ \hyperlink{classPreProcessor}{Pre\+Processor} $>$ pre\+Processor, std\+::unique\+\_\+ptr$<$ \hyperlink{classDetector}{Detector} $>$ detector, bool is\+Test\+Mode)
 \begin{DoxyCompactList}\small\item\em Construct a new \hyperlink{classDriver}{Driver} object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classDriver_ac7645eea8d3ce2bc39ddbda5e840297a}\label{classDriver_ac7645eea8d3ce2bc39ddbda5e840297a}} 
 virtual \hyperlink{classDriver_ac7645eea8d3ce2bc39ddbda5e840297a}{$\sim$\+Driver} ()
 \begin{DoxyCompactList}\small\item\em Destroy the \hyperlink{classDriver}{Driver} object. \end{DoxyCompactList}\item 
-bool \hyperlink{classDriver_a33a612943ed1cbc375f0104a2a274b97}{execute\+Detection\+Pipe\+Line} (std\+::string data\+\_\+path)
-\begin{DoxyCompactList}\small\item\em starts the detection flow given the path to the test data \end{DoxyCompactList}\end{DoxyCompactItemize}
+bool \hyperlink{classDriver_ae57ca27b933b3522aca744205a8a2169}{execute\+Detection\+Pipe\+Line} (const std\+::string \&data\+\_\+path)
+\begin{DoxyCompactList}\small\item\em starts the detection flow given the path to the test data \end{DoxyCompactList}\item 
+double \hyperlink{classDriver_ac148a08a64a167ec6c301e7e90fcdd3e}{evaluate\+Model} (const std\+::string \&data\+\_\+path)
+\begin{DoxyCompactList}\small\item\em To evaluate the performance of the detector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 This class is responsible for executing the complete detection pipline. 
 
-Copyright 2021 Sakshi Kakde, Siddharth Telang, Anubhav Paras 
-
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classDriver_af0658d103e3e810a8e9ef0a53bb2e261}\label{classDriver_af0658d103e3e810a8e9ef0a53bb2e261}} 
+\mbox{\Hypertarget{classDriver_a00a14ae9c9847d0012185e6ca34dde98}\label{classDriver_a00a14ae9c9847d0012185e6ca34dde98}} 
 \index{Driver@{Driver}!Driver@{Driver}}
 \index{Driver@{Driver}!Driver@{Driver}}
-\subsubsection{\texorpdfstring{Driver()}{Driver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Driver\+::\+Driver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Construct a new \hyperlink{classDriver}{Driver} object. 
-
-Copyright 2021 Sakshi Kakde, Siddharth Telang, Anubhav Paras \mbox{\Hypertarget{classDriver_a6c9f75abe2410437cd3a0091d2ed41b3}\label{classDriver_a6c9f75abe2410437cd3a0091d2ed41b3}} 
-\index{Driver@{Driver}!Driver@{Driver}}
-\index{Driver@{Driver}!Driver@{Driver}}
-\subsubsection{\texorpdfstring{Driver()}{Driver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Driver\+::\+Driver (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classDataReader}{Data\+Reader}$<$ cv\+::\+Mat $>$$>$}]{data\+Reader,  }\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classPreProcessor}{Pre\+Processor} $>$}]{pre\+Processor,  }\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classDetector}{Detector} $>$}]{detector }\end{DoxyParamCaption})}
+\subsubsection{\texorpdfstring{Driver()}{Driver()}}
+{\footnotesize\ttfamily Driver\+::\+Driver (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classDataReader}{Data\+Reader}$<$ cv\+::\+Mat $>$$>$}]{data\+Reader,  }\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classPreProcessor}{Pre\+Processor} $>$}]{pre\+Processor,  }\item[{std\+::unique\+\_\+ptr$<$ \hyperlink{classDetector}{Detector} $>$}]{detector,  }\item[{bool}]{is\+Test\+Mode }\end{DoxyParamCaption})}
 
 
 
@@ -57,15 +45,35 @@ Construct a new \hyperlink{classDriver}{Driver} object.
 \hline
 {\em detector} & to detect the objects in the image data \\
 \hline
+{\em is\+Test\+Mode} & to check if \hyperlink{classDriver}{Driver} is being instantiated while unit testing \\
+\hline
 \end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classDriver_a33a612943ed1cbc375f0104a2a274b97}\label{classDriver_a33a612943ed1cbc375f0104a2a274b97}} 
+\mbox{\Hypertarget{classDriver_ac148a08a64a167ec6c301e7e90fcdd3e}\label{classDriver_ac148a08a64a167ec6c301e7e90fcdd3e}} 
+\index{Driver@{Driver}!evaluate\+Model@{evaluate\+Model}}
+\index{evaluate\+Model@{evaluate\+Model}!Driver@{Driver}}
+\subsubsection{\texorpdfstring{evaluate\+Model()}{evaluateModel()}}
+{\footnotesize\ttfamily double Driver\+::evaluate\+Model (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+To evaluate the performance of the detector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+path} & directory path of the test\+\_\+data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double average error in the detected bounding boxes across all the test images 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDriver_ae57ca27b933b3522aca744205a8a2169}\label{classDriver_ae57ca27b933b3522aca744205a8a2169}} 
 \index{Driver@{Driver}!execute\+Detection\+Pipe\+Line@{execute\+Detection\+Pipe\+Line}}
 \index{execute\+Detection\+Pipe\+Line@{execute\+Detection\+Pipe\+Line}!Driver@{Driver}}
 \subsubsection{\texorpdfstring{execute\+Detection\+Pipe\+Line()}{executeDetectionPipeLine()}}
-{\footnotesize\ttfamily bool Driver\+::execute\+Detection\+Pipe\+Line (\begin{DoxyParamCaption}\item[{std\+::string}]{data\+\_\+path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Driver\+::execute\+Detection\+Pipe\+Line (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data\+\_\+path }\end{DoxyParamCaption})}
 
 
 
@@ -80,5 +88,5 @@ starts the detection flow given the path to the test data
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/driver.\+hpp\item 
-src/driver.\+cpp\end{DoxyCompactItemize}
+include/\hyperlink{driver_8hpp}{driver.\+hpp}\item 
+src/\hyperlink{driver_8cpp}{driver.\+cpp}\end{DoxyCompactItemize}

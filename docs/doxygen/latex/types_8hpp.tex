@@ -1,0 +1,92 @@
+\hypertarget{types_8hpp}{}\section{include/types.hpp File Reference}
+\label{types_8hpp}\index{include/types.\+hpp@{include/types.\+hpp}}
+
+
+contains various typedefs  
+
+
+{\ttfamily \#include $<$Eigen/\+Dense$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/core.\+hpp$>$}\newline
+{\ttfamily \#include $<$data.\+hpp$>$}\newline
+Include dependency graph for types.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{types_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{types_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structCentroid}{Centroid}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{types_8hpp_a7edea8e3b5fb20fbd4527baf12ffb97a}\label{types_8hpp_a7edea8e3b5fb20fbd4527baf12ffb97a}} 
+typedef std\+::vector$<$ cv\+::\+Rect $>$ {\bfseries Rectangles}
+\item 
+\mbox{\Hypertarget{types_8hpp_ab47b2f4d68521bc90d778ddf94c51585}\label{types_8hpp_ab47b2f4d68521bc90d778ddf94c51585}} 
+typedef cv\+::\+Input\+Array {\bfseries Image}
+\item 
+\mbox{\Hypertarget{types_8hpp_a9fd4abfb6a16669ad825115ef21fa4ca}\label{types_8hpp_a9fd4abfb6a16669ad825115ef21fa4ca}} 
+typedef cv\+::\+H\+O\+G\+Descriptor {\bfseries S\+V\+M\+H\+O\+G\+Model}
+\item 
+\mbox{\Hypertarget{types_8hpp_adfeac77ddc14cd16fa7f6cd1821a3b87}\label{types_8hpp_adfeac77ddc14cd16fa7f6cd1821a3b87}} 
+typedef std\+::pair$<$ Rectangles, std\+::vector$<$ double $>$ $>$ {\bfseries Rectangles\+And\+Scores}
+\item 
+\mbox{\Hypertarget{types_8hpp_a5199bad41e470890301f3d228a67eac5}\label{types_8hpp_a5199bad41e470890301f3d228a67eac5}} 
+typedef \hyperlink{classData}{Data}$<$ Rectangles\+And\+Scores $>$ {\bfseries Detection\+Output}
+\item 
+\mbox{\Hypertarget{types_8hpp_a959d2ba5f833ae4cd440bd2bf543c83f}\label{types_8hpp_a959d2ba5f833ae4cd440bd2bf543c83f}} 
+typedef cv\+::\+Point3d {\bfseries Coord3D}
+\item 
+\mbox{\Hypertarget{types_8hpp_a8e82e2f9fcd848a3484f1d44124e10ee}\label{types_8hpp_a8e82e2f9fcd848a3484f1d44124e10ee}} 
+typedef cv\+::\+Point {\bfseries Coord2D}
+\item 
+\mbox{\Hypertarget{types_8hpp_abfb1ae9cce37137365824ec13c2f6dff}\label{types_8hpp_abfb1ae9cce37137365824ec13c2f6dff}} 
+typedef struct \hyperlink{structCentroid}{Centroid} {\bfseries Centroid}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contains various typedefs 
+
+M\+IT License
+
+Copyright (c) 2021 Anubhav Paras, Sakshi Kakde, Siddharth Telang
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+T\+HE S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+TY OF A\+NY K\+I\+ND, E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED, I\+N\+C\+L\+U\+D\+I\+NG B\+UT N\+OT L\+I\+M\+I\+T\+ED TO T\+HE W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY, F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+ND N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+NT. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE A\+U\+T\+H\+O\+RS OR C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY C\+L\+A\+IM, D\+A\+M\+A\+G\+ES OR O\+T\+H\+ER L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN AN A\+C\+T\+I\+ON OF C\+O\+N\+T\+R\+A\+CT, T\+O\+RT OR O\+T\+H\+E\+R\+W\+I\+SE, A\+R\+I\+S\+I\+NG F\+R\+OM, O\+UT OF OR IN C\+O\+N\+N\+E\+C\+T\+I\+ON W\+I\+TH T\+HE S\+O\+F\+T\+W\+A\+RE OR T\+HE U\+SE OR O\+T\+H\+ER D\+E\+A\+L\+I\+N\+GS IN T\+HE S\+O\+F\+T\+W\+A\+RE.
+
+\begin{DoxyAuthor}{Author}
+Anubhav Paras (\href{mailto:anubhav@umd.edu}{\tt anubhav@umd.\+edu}) 
+
+Sakshi Kakde (\href{mailto:sakshi@umd.edu}{\tt sakshi@umd.\+edu}) 
+
+Siddharth Telang (\href{mailto:stelang@umd.edu}{\tt stelang@umd.\+edu}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2021-\/10-\/25
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}

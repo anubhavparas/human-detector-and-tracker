@@ -2,8 +2,7 @@
 \label{classHumanDetector}\index{Human\+Detector@{Human\+Detector}}
 
 
-Inheritance diagram for Human\+Detector\+:
-\nopagebreak
+Inheritance diagram for Human\+Detector\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for Human\+Detector\+:
 \end{figure}
 
 
-Collaboration diagram for Human\+Detector\+:
-\nopagebreak
+Collaboration diagram for Human\+Detector\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,16 +21,15 @@ Collaboration diagram for Human\+Detector\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classHumanDetector_adbdfd2cfc3579f254de16aba058cab06}\label{classHumanDetector_adbdfd2cfc3579f254de16aba058cab06}} 
-\hyperlink{classHumanDetector_adbdfd2cfc3579f254de16aba058cab06}{Human\+Detector} ()
-\begin{DoxyCompactList}\small\item\em Construct a new Human \hyperlink{classDetector}{Detector} object. \end{DoxyCompactList}\item 
 \hyperlink{classHumanDetector_ad24009d2c6d212e037ee2ae46a9b9c05}{Human\+Detector} (std\+::unique\+\_\+ptr$<$ \hyperlink{classModel}{Model}$<$ \hyperlink{classData}{Detection\+Output}, Image $>$$>$ model, std\+::unique\+\_\+ptr$<$ \hyperlink{classFrameTransformation}{Frame\+Transformation} $>$ robot\+Frame)
 \begin{DoxyCompactList}\small\item\em Construct a new Human \hyperlink{classDetector}{Detector} object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classHumanDetector_a14a3f12c65510640240522c9e064b5f6}\label{classHumanDetector_a14a3f12c65510640240522c9e064b5f6}} 
 \hyperlink{classHumanDetector_a14a3f12c65510640240522c9e064b5f6}{$\sim$\+Human\+Detector} ()
 \begin{DoxyCompactList}\small\item\em Destroy the Human \hyperlink{classDetector}{Detector} object. \end{DoxyCompactList}\item 
-std\+::vector$<$ Coord3D $>$ \hyperlink{classHumanDetector_a3883a91447922d9b4bfc8ade8281f947}{detect} (const cv\+::\+Mat \&input\+Data) override
-\begin{DoxyCompactList}\small\item\em detects the humans in a given image data displays the bounding boxes and the ids of all the humans detected \end{DoxyCompactList}\end{DoxyCompactItemize}
+std\+::vector$<$ Coord3D $>$ \hyperlink{classHumanDetector_ad6939ac83173d50f4420eae30ff3f978}{detect} (const cv\+::\+Mat \&input\+Data, bool is\+Test\+Mode) override
+\begin{DoxyCompactList}\small\item\em detects the humans in a given image data displays the bounding boxes and the ids of all the humans detected \end{DoxyCompactList}\item 
+double \hyperlink{classHumanDetector_af24d889a9b48029f405a0e6c105b898a}{evaluate\+Model} (const cv\+::\+Mat \&input\+Data, std\+::vector$<$ \hyperlink{structCentroid}{Centroid} $>$ gt\+\_\+centroids)
+\begin{DoxyCompactList}\small\item\em evaluate the detection model based on the ground truth centroids \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -56,11 +53,11 @@ Construct a new Human \hyperlink{classDetector}{Detector} object.
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classHumanDetector_a3883a91447922d9b4bfc8ade8281f947}\label{classHumanDetector_a3883a91447922d9b4bfc8ade8281f947}} 
+\mbox{\Hypertarget{classHumanDetector_ad6939ac83173d50f4420eae30ff3f978}\label{classHumanDetector_ad6939ac83173d50f4420eae30ff3f978}} 
 \index{Human\+Detector@{Human\+Detector}!detect@{detect}}
 \index{detect@{detect}!Human\+Detector@{Human\+Detector}}
 \subsubsection{\texorpdfstring{detect()}{detect()}}
-{\footnotesize\ttfamily std\+::vector$<$ Coord3D $>$ H\+D\+::detect (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{input\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily std\+::vector$<$ Coord3D $>$ H\+D\+::detect (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{input\+Data,  }\item[{bool}]{is\+Test\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -70,17 +67,43 @@ detects the humans in a given image data displays the bounding boxes and the ids
 \begin{DoxyParams}{Parameters}
 {\em input\+Data} & input image data \\
 \hline
+{\em is\+Test\+Mode} & to check if detect is being called while unit testing \\
+\hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 std\+::vector$<$\+Coord3\+D$>$ coordinates of all the detected humans in robot frame 
 \end{DoxyReturn}
 
 
-Implements \hyperlink{classDetector_a70a59ddd18ef4015a74d158e7d70aba4}{Detector}.
+Implements \hyperlink{classDetector_afdf99890fb93a11252eef0dd85598c15}{Detector}.
+
+\mbox{\Hypertarget{classHumanDetector_af24d889a9b48029f405a0e6c105b898a}\label{classHumanDetector_af24d889a9b48029f405a0e6c105b898a}} 
+\index{Human\+Detector@{Human\+Detector}!evaluate\+Model@{evaluate\+Model}}
+\index{evaluate\+Model@{evaluate\+Model}!Human\+Detector@{Human\+Detector}}
+\subsubsection{\texorpdfstring{evaluate\+Model()}{evaluateModel()}}
+{\footnotesize\ttfamily double H\+D\+::evaluate\+Model (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{input\+Data,  }\item[{std\+::vector$<$ \hyperlink{structCentroid}{Centroid} $>$}]{gt\+\_\+centroids }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+evaluate the detection model based on the ground truth centroids 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Data} & input image data \\
+\hline
+{\em gt\+\_\+centroids} & vector of ground truth centroid values for all the detected humans \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double average error in the centroids of the detected bounding boxes 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDetector}{Detector}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/detector.\+hpp\item 
-src/detector.\+cpp\end{DoxyCompactItemize}
+include/\hyperlink{detector_8hpp}{detector.\+hpp}\item 
+src/\hyperlink{detector_8cpp}{detector.\+cpp}\end{DoxyCompactItemize}

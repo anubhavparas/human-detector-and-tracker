@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['humandetector',['HumanDetector',['../classHumanDetector.html',1,'']]]
+  ['frametransformation',['FrameTransformation',['../classFrameTransformation.html',1,'']]]
 ];
