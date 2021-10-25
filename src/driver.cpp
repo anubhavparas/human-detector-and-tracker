@@ -82,7 +82,7 @@ bool Driver::executeDetectionPipeLine(const std::string& data_path) {
     return true;
 }
 
-std::vector<Centroid> Driver::read_groundtruth_centroids(std::string file) {
+std::vector<Centroid> Driver::readGroundTruthCentroids(std::string file) {
     std::cout << "Reading the ground truth centroids for::"
               << file
               << std::endl;
@@ -125,7 +125,7 @@ double Driver::evaluateModel(const std::string& data_path) {
                                 + ".txt";
 
         std::vector<Centroid> gt_centroids =
-                            this->read_groundtruth_centroids(gt_file_name);
+                            this->readGroundTruthCentroids(gt_file_name);
         double error = this->humanDetector->evaluateModel(frame, gt_centroids);
 
         if (error != -1) {
