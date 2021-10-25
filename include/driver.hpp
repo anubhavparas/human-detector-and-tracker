@@ -3,6 +3,7 @@
 #ifndef INCLUDE_DRIVER_HPP_
 #define INCLUDE_DRIVER_HPP_
 
+#include <vector>
 #include <memory>
 #include <string>
 #include <datareader.hpp>
@@ -49,11 +50,29 @@ class Driver {
    */
   bool executeDetectionPipeLine(std::string data_path);
 
+  /**
+   * @brief To evaluate the performance of the detector
+   * 
+   * @param data_path directory path of the test_data
+   * @return double average error in the detected bounding boxes 
+   * across all the test images
+   */
+  double evaluateModel(std::string data_path);
+
  private:
     std::unique_ptr<DataReader<cv::Mat>> dataReader;
     std::unique_ptr<PreProcessor> preProcessor;
     std::unique_ptr<Detector> humanDetector;
     bool isTestMode;
+
+    /**
+     * @brief to read the ground truth centroid values of detected bounding boxes
+     *  from a file
+     * 
+     * @param file file where centroids information for a image is stored
+     * return vector of ground truth centroids of detected bounding boxes
+     */
+    std::vector<Centroid> read_groundtruth_centroids(std::string file);
 };
 
 #endif  //  INCLUDE_DRIVER_HPP_

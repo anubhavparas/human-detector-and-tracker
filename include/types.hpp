@@ -18,4 +18,9 @@ typedef Data<RectanglesAndScores> DetectionOutput;
 typedef cv::Point3d Coord3D;
 typedef cv::Point Coord2D;
 
+typedef struct Centroid {
+    cv::Point coordinate;
+    bool checked = false;
+} Centroid;
+
 #endif  // INCLUDE_TYPES_HPP_
