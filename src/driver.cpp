@@ -10,17 +10,17 @@ Driver::Driver() {
 Driver::Driver(std::unique_ptr<DataReader<cv::Mat>> dataReader,
          std::unique_ptr<PreProcessor> preProcessor,
          std::unique_ptr<Detector> detector,
-         bool isTestMode) {
-  this->dataReader = std::move(dataReader);
-  this->preProcessor = std::move(preProcessor);
-  this->humanDetector = std::move(detector);
-  this->isTestMode = isTestMode;
+         bool isTestMode):
+         dataReader(std::move(dataReader)),
+         preProcessor(std::move(preProcessor)),
+         humanDetector(std::move(detector)),
+         isTestMode(isTestMode) {
 }
 
 Driver::~Driver() {
 }
 
-bool Driver::executeDetectionPipeLine(std::string data_path) {
+bool Driver::executeDetectionPipeLine(const &std::string data_path) {
     std::vector<cv::String> filePaths;
     cv::glob(data_path, filePaths);
 
@@ -65,7 +65,7 @@ std::vector<Centroid> Driver::read_groundtruth_centroids(std::string file) {
 }
 
 
-double Driver::evaluateModel(std::string data_path) {
+double Driver::evaluateModel(std::string& data_path) {
     std::vector<cv::String> filePaths;
     std::string imagePath = data_path + "/pos";
     std::string groundTruthPath = data_path + "/ground_truth/";

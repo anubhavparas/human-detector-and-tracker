@@ -1,3 +1,4 @@
+Done processing ./app/evaluate.cpp
 Done processing ./app/main.cpp
 Done processing ./include/data.hpp
 Done processing ./include/datareader.hpp
@@ -24,5 +25,6 @@ Done processing ./test/test_data.cpp
 Done processing ./test/test_datareader.cpp
 Done processing ./test/test_detector.cpp
 Done processing ./test/test_driver.cpp
+Done processing ./test/test_frame_transformation.cpp
 Done processing ./test/test_model.cpp
 Done processing ./test/test_preprocessor.cpp

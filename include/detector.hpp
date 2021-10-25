@@ -32,12 +32,6 @@ class HumanDetector : public Detector {
   /**
    * @brief Construct a new Human Detector object
    * 
-   */
-  HumanDetector();
-
-  /**
-   * @brief Construct a new Human Detector object
-   * 
    * @param model model used to predict and fetch the bounding boxes
    * @param robotFrame frame transformation to get the coordinates in
    * robot frame
@@ -106,7 +100,6 @@ class HumanDetector : public Detector {
   void displayOutput(const cv::Mat &inputData,
                      const DetectionOutput &predictionOutput, bool isTestMode);
 
-  
   /**
    * @brief Get the Average Error In Detection Centroid object
    * 
