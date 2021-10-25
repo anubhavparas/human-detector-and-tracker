@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.2.1)
 project (human-detector-and-tracker)
 find_package(OpenCV REQUIRED)
+find_package (Eigen3 REQUIRED)
 
 # Add project cmake modules to path.
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
@@ -21,7 +22,7 @@ else()
     set(CMAKE_CXX_FLAGS "-Wall -Wextra -Wpedantic -g")
 endif()
 
-include_directories( ${OpenCV_INCLUDE_DIRS} )
+include_directories( ${OpenCV_INCLUDE_DIRS} /usr/include/eigen3)
 include(CMakeToolsHelpers OPTIONAL)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 14)
