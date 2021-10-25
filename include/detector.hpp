@@ -20,7 +20,10 @@ class Detector {
    * @brief detects objects in image
    * 
    */
-  virtual std::vector<Coord3D> detect(const cv::Mat &inputData, bool isTestMode) = 0;
+  virtual std::vector<Coord3D> detect(const cv::Mat &inputData,
+                                      bool isTestMode) = 0;
+  virtual double evaluateModel(const cv::Mat &inputData,
+                               std::vector<Centroid> gt_centroids) = 0;
   virtual ~Detector() {}
 };
 
@@ -57,7 +60,18 @@ class HumanDetector : public Detector {
    * @return std::vector<Coord3D> coordinates of all the detected humans
    * in robot frame
    */
-  std::vector<Coord3D> detect(const cv::Mat &inputData, bool isTestMode) override;
+  std::vector<Coord3D> detect(const cv::Mat &inputData,
+                              bool isTestMode) override;
+
+  /**
+   * @brief evaluate the detection model based on the ground truth centroids
+   * 
+   * @param inputData input image data
+   * @param gt_centroids vector of ground truth centroid values for all the detected humans
+   * @return double average error in the centroids of the detected bounding boxes
+   */
+  double evaluateModel(const cv::Mat &inputData,
+                       std::vector<Centroid> gt_centroids);
 
  private:
   // model to find the humans
@@ -91,6 +105,18 @@ class HumanDetector : public Detector {
    */
   void displayOutput(const cv::Mat &inputData,
                      const DetectionOutput &predictionOutput, bool isTestMode);
+
+  
+  /**
+   * @brief Get the Average Error In Detection Centroid object
+   * 
+   * @param detected_centroids cetroids calculated from the detection model bounding boxes
+   * @param gt_centroids ground truth values of the centroids of the bounding boxes
+   * @return double average error in the bounding boxes
+   */
+  double getAverageErrorInDetectionCentroid(
+                                const std::vector<Coord2D>& detected_centroids,
+                                std::vector<Centroid> gt_centroids);
 };
 
 #endif  // INCLUDE_DETECTOR_HPP_

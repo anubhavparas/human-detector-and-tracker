@@ -9,7 +9,8 @@
 TEST(svm_model_test, check_prediction_with_human) {
     Model<DetectionOutput, Image> *svmModel = new SVMHumanClassifier();
 
-    std::string test_path = "../data/testdata/FudanPed00028.png";
+    std::string test_path =
+            "../data/testdata/unit_test_data/pos/FudanPed00028.png";
     cv::Mat image = cv::imread(test_path);
     DetectionOutput detectionOut = svmModel->predict(image);
     Rectangles boundingBoxes = detectionOut.getData().first;

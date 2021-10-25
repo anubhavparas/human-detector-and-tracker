@@ -1,5 +1,6 @@
 /** Copyright 2021 Sakshi Kakde, Siddharth Telang, Anubhav Paras */
 
+#include <unordered_set>
 #include <iostream>
 #include <memory>
 #include <opencv2/opencv.hpp>
@@ -31,8 +32,11 @@ int main() {
                                        std::move(humanDetector),
                                        false);
 
-  std::string test_dir = "../data/testdata/pos";
-  detectionDriver->executeDetectionPipeLine(test_dir);
+  std::string test_dir = "../data/testdata";
+  double average_error = detectionDriver->evaluateModel(test_dir);
+  std::cout << "The average error of the model for the dataset:: "
+            << average_error
+            << std::endl;
 
   delete detectionDriver;
 
