@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['imagereader',['ImageReader',['../classImageReader.html',1,'']]]
+  ['humandetector',['HumanDetector',['../classHumanDetector.html',1,'']]]
 ];

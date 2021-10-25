@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['readdata',['readData',['../classImageReader.html#a453f68fc55ae911476514068873f9a3f',1,'ImageReader']]],
-  ['resize',['resize',['../classPreProcessor.html#a49b49d13b2422e02ff7817e965d174df',1,'PreProcessor']]]
+  ['predict',['predict',['../classModel.html#aab70aeca992eb3a1ce09667e169b8743',1,'Model::predict()'],['../classSVMHumanClassifier.html#a14a416a22355b1426d7611082dfa2464',1,'SVMHumanClassifier::predict()']]],
+  ['preprocessor',['PreProcessor',['../classPreProcessor.html',1,'PreProcessor'],['../classPreProcessor.html#ab0196882f25fc9aff349f4669d35de22',1,'PreProcessor::PreProcessor()']]],
+  ['preprocessor_2ecpp',['preprocessor.cpp',['../preprocessor_8cpp.html',1,'']]],
+  ['preprocessor_2ehpp',['preprocessor.hpp',['../preprocessor_8hpp.html',1,'']]]
 ];

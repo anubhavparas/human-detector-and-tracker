@@ -11,8 +11,7 @@ Generic object detection class.
 
 
 
-Inheritance diagram for Detector\+:
-\nopagebreak
+Inheritance diagram for Detector\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,16 +21,17 @@ Inheritance diagram for Detector\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classDetector_a70a59ddd18ef4015a74d158e7d70aba4}\label{classDetector_a70a59ddd18ef4015a74d158e7d70aba4}} 
-virtual std\+::vector$<$ Coord3D $>$ \hyperlink{classDetector_a70a59ddd18ef4015a74d158e7d70aba4}{detect} (const cv\+::\+Mat \&input\+Data)=0
-\begin{DoxyCompactList}\small\item\em detects objects in image \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classDetector_afdf99890fb93a11252eef0dd85598c15}\label{classDetector_afdf99890fb93a11252eef0dd85598c15}} 
+virtual std\+::vector$<$ Coord3D $>$ \hyperlink{classDetector_afdf99890fb93a11252eef0dd85598c15}{detect} (const cv\+::\+Mat \&input\+Data, bool is\+Test\+Mode)=0
+\begin{DoxyCompactList}\small\item\em detects objects in image \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDetector_afaaefdcb9f6271dadf13fd2158e5d9be}\label{classDetector_afaaefdcb9f6271dadf13fd2158e5d9be}} 
+virtual double {\bfseries evaluate\+Model} (const cv\+::\+Mat \&input\+Data, std\+::vector$<$ \hyperlink{structCentroid}{Centroid} $>$ gt\+\_\+centroids)=0
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Generic object detection class. 
 
-Copyright 2021 Sakshi Kakde, Siddharth Telang, Anubhav Paras 
-
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/detector.\+hpp\end{DoxyCompactItemize}
+include/\hyperlink{detector_8hpp}{detector.\+hpp}\end{DoxyCompactItemize}

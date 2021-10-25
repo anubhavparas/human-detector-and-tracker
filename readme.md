@@ -217,7 +217,7 @@ sh run_cpplint.sh
 
 No cpp-lint and cpp-check issues were found.
 
-## Valgrind check:
+## Valgrind Check
 - No memory leaks or error were found due the development code.
 - No memory chunks were 'definitely (directly or indirectly)' lost.
 - Though, there were issues/memory checks related to opencv and other third party libraries.
@@ -231,7 +231,18 @@ make
 valgrind --leak-check=full <path of the executable>
 ```
 
+## Generate Doxygen Documents
+To install doxygen run the following command:
+```
+sudo apt-get install doxygen
+```
 
+To generate the doxygen documents:
+```
+doxygen doxygen.config
+```
+
+The documents are generated in `./docs/doxygen` folder.
 
 
 ## Known issues

@@ -73,46 +73,25 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af0658d103e3e810a8e9ef0a53bb2e261"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDriver.html#af0658d103e3e810a8e9ef0a53bb2e261">Driver</a> ()</td></tr>
-<tr class="memdesc:af0658d103e3e810a8e9ef0a53bb2e261"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classDriver.html" title="This class is responsible for executing the complete detection pipline. ">Driver</a> object.  <a href="#af0658d103e3e810a8e9ef0a53bb2e261">More...</a><br /></td></tr>
-<tr class="separator:af0658d103e3e810a8e9ef0a53bb2e261"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c9f75abe2410437cd3a0091d2ed41b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDriver.html#a6c9f75abe2410437cd3a0091d2ed41b3">Driver</a> (std::unique_ptr&lt; <a class="el" href="classDataReader.html">DataReader</a>&lt; cv::Mat &gt;&gt; dataReader, std::unique_ptr&lt; <a class="el" href="classPreProcessor.html">PreProcessor</a> &gt; preProcessor, std::unique_ptr&lt; <a class="el" href="classDetector.html">Detector</a> &gt; detector)</td></tr>
-<tr class="memdesc:a6c9f75abe2410437cd3a0091d2ed41b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classDriver.html" title="This class is responsible for executing the complete detection pipline. ">Driver</a> object.  <a href="#a6c9f75abe2410437cd3a0091d2ed41b3">More...</a><br /></td></tr>
-<tr class="separator:a6c9f75abe2410437cd3a0091d2ed41b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00a14ae9c9847d0012185e6ca34dde98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDriver.html#a00a14ae9c9847d0012185e6ca34dde98">Driver</a> (std::unique_ptr&lt; <a class="el" href="classDataReader.html">DataReader</a>&lt; cv::Mat &gt;&gt; dataReader, std::unique_ptr&lt; <a class="el" href="classPreProcessor.html">PreProcessor</a> &gt; preProcessor, std::unique_ptr&lt; <a class="el" href="classDetector.html">Detector</a> &gt; detector, bool isTestMode)</td></tr>
+<tr class="memdesc:a00a14ae9c9847d0012185e6ca34dde98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classDriver.html" title="This class is responsible for executing the complete detection pipline. ">Driver</a> object.  <a href="#a00a14ae9c9847d0012185e6ca34dde98">More...</a><br /></td></tr>
+<tr class="separator:a00a14ae9c9847d0012185e6ca34dde98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7645eea8d3ce2bc39ddbda5e840297a"><td class="memItemLeft" align="right" valign="top"><a id="ac7645eea8d3ce2bc39ddbda5e840297a"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDriver.html#ac7645eea8d3ce2bc39ddbda5e840297a">~Driver</a> ()</td></tr>
 <tr class="memdesc:ac7645eea8d3ce2bc39ddbda5e840297a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="classDriver.html" title="This class is responsible for executing the complete detection pipline. ">Driver</a> object. <br /></td></tr>
 <tr class="separator:ac7645eea8d3ce2bc39ddbda5e840297a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33a612943ed1cbc375f0104a2a274b97"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDriver.html#a33a612943ed1cbc375f0104a2a274b97">executeDetectionPipeLine</a> (std::string data_path)</td></tr>
-<tr class="memdesc:a33a612943ed1cbc375f0104a2a274b97"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the detection flow given the path to the test data  <a href="#a33a612943ed1cbc375f0104a2a274b97">More...</a><br /></td></tr>
-<tr class="separator:a33a612943ed1cbc375f0104a2a274b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae57ca27b933b3522aca744205a8a2169"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDriver.html#ae57ca27b933b3522aca744205a8a2169">executeDetectionPipeLine</a> (const std::string &amp;data_path)</td></tr>
+<tr class="memdesc:ae57ca27b933b3522aca744205a8a2169"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the detection flow given the path to the test data  <a href="#ae57ca27b933b3522aca744205a8a2169">More...</a><br /></td></tr>
+<tr class="separator:ae57ca27b933b3522aca744205a8a2169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac148a08a64a167ec6c301e7e90fcdd3e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDriver.html#ac148a08a64a167ec6c301e7e90fcdd3e">evaluateModel</a> (const std::string &amp;data_path)</td></tr>
+<tr class="memdesc:ac148a08a64a167ec6c301e7e90fcdd3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">To evaluate the performance of the detector.  <a href="#ac148a08a64a167ec6c301e7e90fcdd3e">More...</a><br /></td></tr>
+<tr class="separator:ac148a08a64a167ec6c301e7e90fcdd3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class is responsible for executing the complete detection pipline. </p>
-<p>Copyright 2021 Sakshi Kakde, Siddharth Telang, Anubhav Paras </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af0658d103e3e810a8e9ef0a53bb2e261"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0658d103e3e810a8e9ef0a53bb2e261">&#9670;&nbsp;</a></span>Driver() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Driver::Driver </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct a new <a class="el" href="classDriver.html" title="This class is responsible for executing the complete detection pipline. ">Driver</a> object. </p>
-<p>Copyright 2021 Sakshi Kakde, Siddharth Telang, Anubhav Paras </p>
-
-</div>
-</div>
-<a id="a6c9f75abe2410437cd3a0091d2ed41b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c9f75abe2410437cd3a0091d2ed41b3">&#9670;&nbsp;</a></span>Driver() <span class="overload">[2/2]</span></h2>
+<a id="a00a14ae9c9847d0012185e6ca34dde98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00a14ae9c9847d0012185e6ca34dde98">&#9670;&nbsp;</a></span>Driver()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -133,7 +112,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classDetector.html">Detector</a> &gt;&#160;</td>
-          <td class="paramname"><em>detector</em>&#160;</td>
+          <td class="paramname"><em>detector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isTestMode</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -149,6 +134,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
     <tr><td class="paramname">dataReader</td><td>to read the images or video/camera feed </td></tr>
     <tr><td class="paramname">preProcessor</td><td>for the preprocessing of the data </td></tr>
     <tr><td class="paramname">detector</td><td>to detect the objects in the image data </td></tr>
+    <tr><td class="paramname">isTestMode</td><td>to check if <a class="el" href="classDriver.html" title="This class is responsible for executing the complete detection pipline. ">Driver</a> is being instantiated while unit testing </td></tr>
   </table>
   </dd>
 </dl>
@@ -156,8 +142,35 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a33a612943ed1cbc375f0104a2a274b97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33a612943ed1cbc375f0104a2a274b97">&#9670;&nbsp;</a></span>executeDetectionPipeLine()</h2>
+<a id="ac148a08a64a167ec6c301e7e90fcdd3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac148a08a64a167ec6c301e7e90fcdd3e">&#9670;&nbsp;</a></span>evaluateModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Driver::evaluateModel </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>data_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To evaluate the performance of the detector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data_path</td><td>directory path of the test_data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double average error in the detected bounding boxes across all the test images </dd></dl>
+
+</div>
+</div>
+<a id="ae57ca27b933b3522aca744205a8a2169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae57ca27b933b3522aca744205a8a2169">&#9670;&nbsp;</a></span>executeDetectionPipeLine()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,7 +178,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">bool Driver::executeDetectionPipeLine </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>data_path</em></td><td>)</td>
           <td></td>
         </tr>
@@ -184,7 +197,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="driver_8hpp_source.html">driver.hpp</a></li>
-<li>src/driver.cpp</li>
+<li>src/<a class="el" href="driver_8cpp.html">driver.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
