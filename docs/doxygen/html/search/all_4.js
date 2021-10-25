@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['humandetector',['HumanDetector',['../classHumanDetector.html',1,'HumanDetector'],['../classHumanDetector.html#adbdfd2cfc3579f254de16aba058cab06',1,'HumanDetector::HumanDetector()'],['../classHumanDetector.html#ad24009d2c6d212e037ee2ae46a9b9c05',1,'HumanDetector::HumanDetector(std::unique_ptr&lt; Model&lt; DetectionOutput, Image &gt;&gt; model, std::unique_ptr&lt; FrameTransformation &gt; robotFrame)']]]
+  ['getdata',['getData',['../classData.html#a1c956c4d07da4ff318f17811254ec7e5',1,'Data']]],
+  ['getrobotframe',['getRobotFrame',['../classFrameTransformation.html#ab5131e1392b2fb97c65014eec96d54a8',1,'FrameTransformation']]]
 ];

@@ -2,31 +2,51 @@
 \label{classFrameTransformation}\index{Frame\+Transformation@{Frame\+Transformation}}
 
 
+Class responsible to convert the coordinates from camera frame to robot frame.  
+
+
+
+
 {\ttfamily \#include $<$frame\+\_\+transformation.\+hpp$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classFrameTransformation_aa4495bbd8e06ac1d793063c7a0aa0c03}\label{classFrameTransformation_aa4495bbd8e06ac1d793063c7a0aa0c03}} 
 \hyperlink{classFrameTransformation_aa4495bbd8e06ac1d793063c7a0aa0c03}{Frame\+Transformation} ()
-\item 
-\mbox{\Hypertarget{classFrameTransformation_ab5131e1392b2fb97c65014eec96d54a8}\label{classFrameTransformation_ab5131e1392b2fb97c65014eec96d54a8}} 
-virtual Coord3D {\bfseries get\+Robot\+Frame} (Coord2D image\+Coordinates)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Construct a new Frame Transformation object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFrameTransformation_a6db4d1bb1d72c02855aa2732205cd313}\label{classFrameTransformation_a6db4d1bb1d72c02855aa2732205cd313}} 
+virtual \hyperlink{classFrameTransformation_a6db4d1bb1d72c02855aa2732205cd313}{$\sim$\+Frame\+Transformation} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Frame Transformation object. \end{DoxyCompactList}\item 
+virtual Coord3D \hyperlink{classFrameTransformation_ab5131e1392b2fb97c65014eec96d54a8}{get\+Robot\+Frame} (Coord2D image\+Coordinates)
+\begin{DoxyCompactList}\small\item\em Get the Robot Frame object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Copyright 2021 Sakshi Kakde, Siddharth Telang, Anubhav Paras 
+Class responsible to convert the coordinates from camera frame to robot frame. 
 
-\subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classFrameTransformation_aa4495bbd8e06ac1d793063c7a0aa0c03}\label{classFrameTransformation_aa4495bbd8e06ac1d793063c7a0aa0c03}} 
-\index{Frame\+Transformation@{Frame\+Transformation}!Frame\+Transformation@{Frame\+Transformation}}
-\index{Frame\+Transformation@{Frame\+Transformation}!Frame\+Transformation@{Frame\+Transformation}}
-\subsubsection{\texorpdfstring{Frame\+Transformation()}{FrameTransformation()}}
-{\footnotesize\ttfamily Frame\+Transformation\+::\+Frame\+Transformation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFrameTransformation_ab5131e1392b2fb97c65014eec96d54a8}\label{classFrameTransformation_ab5131e1392b2fb97c65014eec96d54a8}} 
+\index{Frame\+Transformation@{Frame\+Transformation}!get\+Robot\+Frame@{get\+Robot\+Frame}}
+\index{get\+Robot\+Frame@{get\+Robot\+Frame}!Frame\+Transformation@{Frame\+Transformation}}
+\subsubsection{\texorpdfstring{get\+Robot\+Frame()}{getRobotFrame()}}
+{\footnotesize\ttfamily Coord3D Frame\+Transformation\+::get\+Robot\+Frame (\begin{DoxyParamCaption}\item[{Coord2D}]{image\+Coordinates }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Copyright 2021 Sakshi Kakde, Siddharth Telang, Anubhav Paras 
+
+
+Get the Robot Frame object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+Coordinates} & coordinates in camera frame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Coord3D coordinates in robot frame 
+\end{DoxyReturn}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/frame\+\_\+transformation.\+hpp\item 
-src/frame\+\_\+transformation.\+cpp\end{DoxyCompactItemize}
+include/\hyperlink{frame__transformation_8hpp}{frame\+\_\+transformation.\+hpp}\item 
+src/\hyperlink{frame__transformation_8cpp}{frame\+\_\+transformation.\+cpp}\end{DoxyCompactItemize}

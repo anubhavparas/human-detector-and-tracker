@@ -1,6 +1,6 @@
 var searchData=
 [
   ['data',['Data',['../classData.html#ab37beb31b788e0c806211af241b86bba',1,'Data::Data()'],['../classData.html#aeaaa183d93a880175aa4775525cd6165',1,'Data::Data(T data)']]],
-  ['detect',['detect',['../classDetector.html#a70a59ddd18ef4015a74d158e7d70aba4',1,'Detector::detect()'],['../classHumanDetector.html#a3883a91447922d9b4bfc8ade8281f947',1,'HumanDetector::detect()']]],
-  ['driver',['Driver',['../classDriver.html#af0658d103e3e810a8e9ef0a53bb2e261',1,'Driver::Driver()'],['../classDriver.html#a6c9f75abe2410437cd3a0091d2ed41b3',1,'Driver::Driver(std::unique_ptr&lt; DataReader&lt; cv::Mat &gt;&gt; dataReader, std::unique_ptr&lt; PreProcessor &gt; preProcessor, std::unique_ptr&lt; Detector &gt; detector)']]]
+  ['detect',['detect',['../classDetector.html#afdf99890fb93a11252eef0dd85598c15',1,'Detector::detect()'],['../classHumanDetector.html#ad6939ac83173d50f4420eae30ff3f978',1,'HumanDetector::detect()']]],
+  ['driver',['Driver',['../classDriver.html#a00a14ae9c9847d0012185e6ca34dde98',1,'Driver']]]
 ];

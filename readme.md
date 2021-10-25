@@ -2,8 +2,8 @@
 
 Module to detect and track humans and return their coordinate position.
 
-[![Build Status](https://app.travis-ci.com/anubhavparas/human-detector-and-tracker.svg?branch=main)](https://app.travis-ci.com/github/anubhavparas/human-detector-and-tracker)
-[![Coverage Status](https://coveralls.io/repos/github/anubhavparas/human-detector-and-tracker/badge.png?branch=main)](https://coveralls.io/github/anubhavparas/human-detector-and-tracker?branch=main)
+[![Build Status](https://app.travis-ci.com/sakshikakde/human-detector-and-tracker.svg?branch=main)](https://app.travis-ci.com/github/sakshikakde/human-detector-and-tracker)
+[![Coverage Status](https://coveralls.io/repos/github/sakshikakde/human-detector-and-tracker/badge.png?branch=main)](https://coveralls.io/github/sakshikakde/human-detector-and-tracker?branch=main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ---
 
@@ -69,9 +69,9 @@ SOFTWARE.
 ## Design
 The following are the proposed designs for the human detector and tracker: 
 
-![alt text](./UML/initial/HumanDetectorTracker_ClassDiagram.png?raw=true "Human Detecttor Class Diagram")
+![alt text](./UML/revised/HumanDetectorTracker_ClassDiagram.png?raw=true "Human Detector Class Diagram")
 
-Activity flow diagrams can be found [here](./UML/initial/).
+Activity flow diagrams can be found [here](./UML/revised/).
 
 ## Development process
 Agile Development Process will be used in the development process with Test-Driven Development.
@@ -100,14 +100,33 @@ Agile Development Process will be used in the development process with Test-Driv
 We are using the INRIA dataset.
 
 Instructions to fetch the dataset:
-- Run
+- Download the data set (zip file) from [here](https://drive.google.com/drive/u/2/folders/1LLSbmckeG4e6aAxKugMVtGgSLhDN5LL8).
+
+- Extract/copy the images and ground truth from the zip dataset into the [testdata](./data/testdata/) folder of the repository.
+
+- [pos](./data/testdata/pos) folder contains all the test images
+
+- [ground_truth](./data/testdata/ground_truth) folder contains the ground truth centroid values.
+
+- These two folders contain four test files for dummy runs.
+
 ```
-wget ftp://ftp.inrialpes.fr/pub/lear/douze/data/INRIAPerson.tar
+|--data
+  |__testdata
+     |__pos
+     |__ground_truth
+     |__unit_test_data
 ```
-- Extract the images from the dataset into a [testdata](./data/testdata) folder of the repository.
 
 
+## Results
 
+- Detection output of running the detection model over the INRIA test data. [Video](https://drive.google.com/file/d/1JiiD9xUopTIC3foAmCpUVGNx5wZsVAEo/view?usp=sharing)
+
+![alt text](./docs/media/human_detection_result.gif?raw=true "Human Detector Result")
+
+- Detection output of running the detection model over live camera feed. [Video](https://drive.google.com/file/d/1k0gt8TGLcTtxaLj-Ekj7eYVgZGO9zSJb/view?usp=sharing)
+![alt text](./docs/media/humans_webcam.gif?raw=true "Human Detector Result on live feed")
 ## Standard install via command-line
 
 ### Install Dependencies
@@ -135,7 +154,7 @@ sudo ldconfig
 cd ../../
 ```
 
-### Running the code
+### Running the human detection app
 
 ```
 git clone --recursive https://github.com/anubhavparas/human-detector-and-tracker.git
@@ -145,12 +164,30 @@ cd build
 cmake ..
 make
 Run tests: ./test/cpp-test
-Run program: ./app/shell-app
+Run the main human detection pipeline: ./app/human-detect-app
 ```
 or run: 
 ```
 sh build_coverage_off.sh
 ```
+
+### Running the evaluation test
+```
+git clone --recursive https://github.com/anubhavparas/human-detector-and-tracker.git
+cd <path to repository>
+mkdir build
+cd build
+cmake ..
+make
+Run tests: ./test/cpp-test
+Run the model evaluation test: ./app/evaluate-human-detect-app
+```
+
+- Results of the model evaluation test: The error was calculated on the basis of shift of the centroids of the detected bounding boxes and the ground truth centroids. The error (pixel shift) for the test data can be considered to be the mean centroid shift (in pixels) in each image.
+- Error calculation is as per the image below:
+![alt text](./docs/media/error.png?raw=true "Error is detection") 
+- Mean error in data calculated: **43.3 pixel units**.
+
 
 ## Building for code coverage
 Install code-coverage tool, else the code coverage command will not work. It is a one time installation: 
@@ -180,6 +217,46 @@ Run cpplint: Results are stored in `./results/cpplint_result.txt`
 ```
 sh run_cpplint.sh
 ```
+
+No cpp-lint and cpp-check issues were found.
+
+## Valgrind Check
+- No memory leaks or error were found due the development code.
+- No memory chunks were 'definitely (directly or indirectly)' lost.
+- Though, there were issues/memory checks related to opencv and other third party libraries.
+- Results can be found [here](./results/valgrind_results).
+- To run valgrind: 
+```
+mkdir build
+cd build/
+cmake ..
+make
+valgrind --leak-check=full <path of the executable>
+```
+
+## Generate Doxygen Documents
+To install doxygen run the following command:
+```
+sudo apt-get install doxygen
+```
+
+To generate the doxygen documents:
+```
+doxygen doxygen.config
+```
+
+The documents are generated in `./docs/doxygen` folder.
+
+
+## Known issues
+1) Highly depends on lighting conditions
+2) Depends on the image contrast
+3) Confuses humans with tall objects like trees, poles, legs, etc.
+4) Depends on size of input image and the visible human.
+
+
+## Release(s)
+First release version: **Human-Detector-And-Tracker-21.10**
 
 
 

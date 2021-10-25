@@ -81,14 +81,16 @@ Inheritance diagram for Detector:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a70a59ddd18ef4015a74d158e7d70aba4"><td class="memItemLeft" align="right" valign="top"><a id="a70a59ddd18ef4015a74d158e7d70aba4"></a>
-virtual std::vector&lt; Coord3D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetector.html#a70a59ddd18ef4015a74d158e7d70aba4">detect</a> (const cv::Mat &amp;inputData)=0</td></tr>
-<tr class="memdesc:a70a59ddd18ef4015a74d158e7d70aba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">detects objects in image <br /></td></tr>
-<tr class="separator:a70a59ddd18ef4015a74d158e7d70aba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdf99890fb93a11252eef0dd85598c15"><td class="memItemLeft" align="right" valign="top"><a id="afdf99890fb93a11252eef0dd85598c15"></a>
+virtual std::vector&lt; Coord3D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDetector.html#afdf99890fb93a11252eef0dd85598c15">detect</a> (const cv::Mat &amp;inputData, bool isTestMode)=0</td></tr>
+<tr class="memdesc:afdf99890fb93a11252eef0dd85598c15"><td class="mdescLeft">&#160;</td><td class="mdescRight">detects objects in image <br /></td></tr>
+<tr class="separator:afdf99890fb93a11252eef0dd85598c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaaefdcb9f6271dadf13fd2158e5d9be"><td class="memItemLeft" align="right" valign="top"><a id="afaaefdcb9f6271dadf13fd2158e5d9be"></a>
+virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>evaluateModel</b> (const cv::Mat &amp;inputData, std::vector&lt; <a class="el" href="structCentroid.html">Centroid</a> &gt; gt_centroids)=0</td></tr>
+<tr class="separator:afaaefdcb9f6271dadf13fd2158e5d9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generic object detection class. </p>
-<p>Copyright 2021 Sakshi Kakde, Siddharth Telang, Anubhav Paras </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="detector_8hpp_source.html">detector.hpp</a></li>
 </ul>
