@@ -125,7 +125,7 @@ Detection output of running the detection model over the INRIA test data. [Video
 
 ![alt text](./docs/media/human_detection_result.gif?raw=true "Human Detector Result")
 
-
+![alt text](./docs/media/humans_webcam.gif?raw=true "Human Detector Result on live feed")
 ## Standard install via command-line
 
 ### Install Dependencies
