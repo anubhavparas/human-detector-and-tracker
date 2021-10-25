@@ -69,7 +69,7 @@ SOFTWARE.
 ## Design
 The following are the proposed designs for the human detector and tracker: 
 
-![alt text](./UML/initial/HumanDetectorTracker_ClassDiagram.png?raw=true "Human Detecttor Class Diagram")
+![alt text](./UML/initial/HumanDetectorTracker_ClassDiagram.png?raw=true "Human Detector Class Diagram")
 
 Activity flow diagrams can be found [here](./UML/initial/).
 
@@ -120,6 +120,10 @@ Instructions to fetch the dataset:
 
 
 ## Results
+
+Detection output of running the detection model over the INRIA test data. [Video](https://drive.google.com/file/d/1JiiD9xUopTIC3foAmCpUVGNx5wZsVAEo/view?usp=sharing)
+
+![alt text](./docs/media/human_detection_result.gif?raw=true "Human Detector Result")
 
 
 ## Standard install via command-line
