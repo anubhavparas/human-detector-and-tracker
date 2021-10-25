@@ -89,5 +89,4 @@ TEST(driver_test, test_evaluate_model) {
 
     delete detectionDriver;
     detectionDriver = nullptr;
-
 }
