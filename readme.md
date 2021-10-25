@@ -100,12 +100,26 @@ Agile Development Process will be used in the development process with Test-Driv
 We are using the INRIA dataset.
 
 Instructions to fetch the dataset:
-- Run
-```
-wget ftp://ftp.inrialpes.fr/pub/lear/douze/data/INRIAPerson.tar
-```
-- Extract the images from the dataset into a [testdata](./data/testdata) folder of the repository.
+- Download the data set (zip file) from [here](https://drive.google.com/drive/u/2/folders/1LLSbmckeG4e6aAxKugMVtGgSLhDN5LL8).
 
+- Extract/copy the images and ground truth from the zip dataset into the [testdata](./data/testdata/) folder of the repository.
+
+- [pos](./data/testdata/pos) folder contains all the test images
+
+- [ground_truth](./data/testdata/ground_truth) folder contains the ground truth centroid values.
+
+- These two folders contain three test files for dummy runs.
+
+```
+|--data
+  |__testdata
+     |__pos
+     |__ground_truth
+     |__unit_test_data
+```
+
+
+## Results
 
 
 ## Standard install via command-line
@@ -135,7 +149,7 @@ sudo ldconfig
 cd ../../
 ```
 
-### Running the code
+### Running the human detection app
 
 ```
 git clone --recursive https://github.com/anubhavparas/human-detector-and-tracker.git
@@ -145,12 +159,28 @@ cd build
 cmake ..
 make
 Run tests: ./test/cpp-test
-Run program: ./app/shell-app
+Run the main human detection pipeline: ./app/human-detect-app
 ```
 or run: 
 ```
 sh build_coverage_off.sh
 ```
+
+### Running the evaluation test
+```
+git clone --recursive https://github.com/anubhavparas/human-detector-and-tracker.git
+cd <path to repository>
+mkdir build
+cd build
+cmake ..
+make
+Run tests: ./test/cpp-test
+Run the model evaluation test: ./app/evaluate-human-detect-app
+```
+
+- Results of the model evaluation test: The error was calculated on the basis of shift of the centroids of the detected bounding boxes and the ground truth centroids. The error (pixel shift) for the test data can be considered to be the mean centroid shift (in pixels) in each image.
+- Mean error in data calculated: **43.3 pixel units**.
+
 
 ## Building for code coverage
 Install code-coverage tool, else the code coverage command will not work. It is a one time installation: 
@@ -180,6 +210,12 @@ Run cpplint: Results are stored in `./results/cpplint_result.txt`
 ```
 sh run_cpplint.sh
 ```
+
+## Known issues
+1) Highly depends on lighting conditions
+2) Depends on the image contrast
+3) Confuses humans with tall objects like trees, poles, legs, etc.
+4) Depends on size of input image and the visible human.
 
 
 
