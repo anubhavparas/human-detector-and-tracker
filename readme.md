@@ -207,6 +207,22 @@ sh build_coverage_on.sh
 
 This generates a index.html page in the build/coverage sub-directory that can be viewed locally in a web browser.
 
+## GMock Implementation:
+
+Gmock have been to used to create the mocks (present [here](include/mock)) of the following classes for unit testing:
+- [DataReader](include/mock/mock_datareader.hpp) : used for testing the Driver class [test_driver](test/test_driver.cpp).
+- [Detector](include/mock/mock_detector.hpp) : used for testing the Driver class [test_driver](test/test_driver.cpp).
+- [FrameTransformation](include/mock/mock_frame_transformation.hpp) : used for testing Detector class [test_detector](test/test_detector.cpp).
+- [Model](include/mock/mock_model.hpp) : used for testing Detector class [test_detector](test/test_detector.cpp).
+- [PreProcessor](include/mock/mock_preprocessor.hpp) : used for testing Driver class [test_driver](test/test_driver.cpp).
+
+These mock cut-off the dependencies of the classes under test on actual implementation of the dependent classes and make it easier to test them in isolation.
+
+The mock dependencies are injected in the classes under test at the time of unit testing.
+
+Refer to the UML diagram with the mocks [here](UML/revised/UML_HumanDetectorTracker_with_Mocks.png). The grey colored blocks are the mocks.
+
+
 ## Run cppcheck and cpplint
 Run cppcheck: Results are stored in `./results/cppcheck_process.txt`, `./results/cppcheck_result.txt` 
 ```
